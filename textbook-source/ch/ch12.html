@@ -1,0 +1,35 @@
+<section class="chapter" id="ch12">
+<span class="ch-num">Chapter 12 · Project</span>
+<h2>dat-accretion: one ruler for every capital action</h2>
+<div class="status-row"><span>Python + public page</span><span>v1 built; weekly refresh</span><span>rahilbhavan.github.io/dat-accretion</span></div>
+<div class="prose">
+<p><b>The question.</b> Strategy, BitMine and SharpLink each sell stock, buy it back and trade preferreds every week. Using Strategy's own net-coins-per-share definition for all three: what did each action do per dollar, and at what price does it change sign?</p>
+<p>The key move is that Strategy's 2026 rotation (sell MSTR, retire STRC) and BitMine's opposite rotation (sell its BMNP preferred, buy back common) share <b>one break-even line: m = q</b>. Strategy's adds while m &gt; q; BitMine's adds while m &lt; q.</p>
+</div>
+<figure class="figure">
+<h4>Where each firm sat, week ending Oct 11, 2026</h4>
+<p class="fl">Across: preferred price ÷ $100 (q). Up: net mNAV (m). On the diagonal, a rotation neither adds nor subtracts.</p>
+<div class="chartwrap"><svg class="chart" viewBox="0 0 540 380" role="img" aria-labelledby="dT" style="max-width:560px">
+<title id="dT">Strategy at q 0.997, m 1.191, well above the diagonal, so its rotation adds. BitMine at q 0.995, m 0.998, almost exactly on the line.</title>
+<line class="ax" x1="60" y1="330" x2="480" y2="330"/><line class="ax" x1="60" y1="30" x2="60" y2="330"/>
+<g text-anchor="middle"><text x="60" y="350">0.95</text><text x="130" y="350">1.00</text><text x="270" y="350">1.10</text><text x="410" y="350">1.20</text><text x="270" y="372" class="ink">q = preferred price ÷ $100</text></g>
+<g text-anchor="end"><text x="54" y="334">0.95</text><text x="54" y="284">1.00</text><text x="54" y="184">1.10</text><text x="54" y="84">1.20</text></g>
+<line class="ref" x1="60" y1="330" x2="480" y2="30"/>
+<text x="300" y="178" class="ink">m = q: break-even line</text>
+<circle class="dot" cx="125.1" cy="89" r="7"/>
+<text x="138" y="84" class="strong">Strategy (STRC $99.65, m 1.191)</text>
+<text x="138" y="102">Rotation adds; stops if STRC &gt; $119.07</text>
+<circle cx="123.4" cy="282" r="7" fill="#F5F5EF" stroke="#111214" stroke-width="2"/>
+<text x="138" y="300" class="strong">BitMine (BMNP $99.53, m 0.998)</text>
+<text x="138" y="318">On the line: within estimation error</text>
+<text x="66" y="22">m = net mNAV</text>
+</svg></div>
+<figcaption>From the dat-accretion memo. STRC closed below its break-even in 22 of 22 filed weeks; BMNP in 18 of 18.</figcaption>
+</figure>
+<div class="prose">
+<h4>How it's built</h4>
+<p>Each weekly 8-K is parsed into actions (one row each, linked to its filing). Balances are rolled forward from 10-Q anchors, and each week's change in net coins per share is split into price, convert flips, each action, carry and a residual. A done check compares the rebuild against live sources before the page updates. There's also a 24-lesson course in the repo that teaches it from scratch.</p>
+<h4>What it taught me for this book</h4>
+<ul><li>The rules table in Chapter 3.</li><li>Why net mNAV, not basic mNAV, is the number to watch.</li><li>That Strategy's 2026 buybacks were accretive on its own definition every week.</li></ul>
+</div>
+<p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>

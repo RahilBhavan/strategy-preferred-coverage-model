@@ -1,0 +1,8 @@
+{
+  "status": "Draft rehearsal, not November data and not approved for posting",
+  "posts": [
+    "At Oct 15 inputs, Strategy\u2019s $4.88B Reserve covers 37.5 months of modelled dividends and interest before principal. A 15.2-year figure also counts its common ATM. That assumes demand. The Excel path adds dated convertible puts.",
+    "Net mNAV in the workbook is 1.175x. The 1x issuance gate is an assumption. In the Severe case, that gate closes and the path shows unmet cash needs. Figures use dated public inputs; Microsoft Excel verification and the Q3 refresh remain pending.",
+    "The workbook, assumptions and sources: https://rahilbhavan.github.io/strategy-preferred-coverage-model/"
+  ]
+}

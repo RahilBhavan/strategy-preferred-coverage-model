@@ -1,0 +1,6 @@
+node_modules/
+*.inspect.ndjson
+__pycache__/
+.DS_Store
+verification-previews/
+node_modules

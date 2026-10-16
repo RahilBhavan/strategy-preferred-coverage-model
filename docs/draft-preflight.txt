@@ -1,0 +1,5 @@
+post 1: 228 chars | 'At Oct 15 inputs, Strategy’s $4.88B Reserve covers 37.5 months of mode'
+post 2: 245 chars | 'Net mNAV in the workbook is 1.175x. The 1x issuance gate is an assumpt'
+post 3: 62 chars | 'The workbook, assumptions and sources: https://rahilbhavan.github.io/s'
+PASS: no findings
+RESULT: PASS

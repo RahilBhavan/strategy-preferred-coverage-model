@@ -1,0 +1,23 @@
+<section class="chapter" id="ch14">
+<span class="ch-num">Chapter 14</span>
+<h2>Interview prep: twelve questions</h2>
+<div class="prose"><p>Answer each one out loud in under a minute before opening it. The answers use this book's numbers. Refresh them after Q3.</p></div>
+<div class="check">
+<p>Company and products</p>
+<details><summary>Explain Strategy in two sentences.</summary><p>Strategy raises money by selling common stock, preferred stock and convertible notes, and uses it to buy bitcoin, aiming to raise bitcoin per share over time. It sells the preferreds as "digital credit": dollar or euro income backed by about $70B of bitcoin, paid from a cash reserve and ongoing stock sales.</p></details>
+<details><summary>Walk me through the five preferreds.</summary><p>From most senior: STRF (10%, penalty step-up if skipped), STRC (variable, 12% now, steered to trade near $100, the biggest at ≈ $8.8B), STRE (10% in euros, listed in Luxembourg), STRK (8%, converts into 0.1 MSTR, can pay in shares) and STRD (10%, non-cumulative, most junior). Each targets a different buyer.</p></details>
+<details><summary>Why is STRC different from the others?</summary><p>Its rate is reset monthly to keep its price near $100, and it pays twice a month (daily if the Oct 28 vote passes). That makes it feel like a cash product, but the rate rises under stress: it went from 9% to 12% in a year.</p></details>
+<p>Capital markets</p>
+<details><summary>When does issuing MSTR to acquire bitcoin add net bitcoin per share?</summary><p>Above 1x net mNAV, under unchanged prices and the issuer’s dilution assumptions. This is an effect on one metric, not a conclusion about shareholder value. Management retains issuance discretion near 1x.</p></details>
+<details><summary>Why did Strategy sell MSTR to buy back STRC in 2026?</summary><p>MSTR traded at about 1.19x net mNAV while STRC traded just under $100. Retiring a $100 claim for $99.65 with stock sold at a premium adds net bitcoin per share while m &gt; q, and it supports STRC's price. It stops adding if STRC trades above $100 × m.</p></details>
+<details><summary>Which mNAV do you use, and why does it matter?</summary><p>The workbook uses reconstructed net mNAV, about 1.175x at Oct 15 prices. Legacy EV mNAV is about 1.131x and basic mNAV is 0.916x at those inputs. The 1.191x dat-accretion observation is from the week ending Oct 11. Always match dates and definitions.</p></details>
+<p>Liability management</p>
+<details><summary>How long can Strategy pay its preferred dividends?</summary><p>Annual dividends plus interest are about $1.56B. The $4.88B Reserve covers about 37 months alone, comfortably above the 12-month policy floor. If demand permits full use of the $18.8B common ATM, static coverage is about 15 years before principal. The model’s 1x gate can stop issuance; puts can require financing earlier. Read the dated path rather than treating the static ratio as a forecast.</p></details>
+<details><summary>What's the biggest single lever on the dividend bill?</summary><p>STRC's rate. It's two-thirds of the bill, and each point costs about $88M a year. Paying STRK in shares saves about $112M a year.</p></details>
+<details><summary>What liability would you watch in 2027–28?</summary><p>$5.9B of convertible principal that holders can put between Sep 2027 and Sep 2028. If MSTR trades below the conversion prices, Strategy must refinance or repay. The Reserve isn't designated for principal.</p></details>
+<p>Judgement</p>
+<details><summary>What's the bear case in one line?</summary><p>If bitcoin falls and the premium disappears, the main funding tool switches off while STRC's rate rises. The company is then spending a finite reserve on a growing bill and has to decide whether to sell the bitcoin it exists to hold.</p></details>
+<details><summary>What supports coverage in the model’s favorable case?</summary><p>A cash Reserve, higher bitcoin value and continued demand for common issuance support coverage under the case assumptions. Preferreds are perpetual, but convertible puts still create dated cash needs. An mNAV above 1x alone does not establish self-funding.</p></details>
+<details><summary>What would you build next for the team?</summary><p>A weekly refresh of the coverage model wired to the 8-K parser from dat-accretion. That would give a one-page "credit dashboard" that updates every Monday: reserve months, STRC vs par, net mNAV vs 1.0x, BTC cover and days to the next put.</p></details>
+</div>
+<p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>

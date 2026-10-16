@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {coverage,snapshot} from './calculator.mjs';
+assert.ok(Math.abs(coverage().sharePrice-151.29)<1e-6);
+assert.ok(Math.abs(coverage({mnav:.8}).years-snapshot.reserve/snapshot.baseCharges)<1e-8);
+assert.ok(coverage({rate:.15}).months<coverage().months);
+assert.ok(coverage({price:30000}).sharePrice<coverage().sharePrice);
+assert.throws(()=>coverage({price:0}));
+assert.ok(coverage({mnav:1}).annualCommon>0);
+assert.equal(coverage({mnav:.9999}).annualCommon,0);
+console.log('7 calculator behavior checks passed');

@@ -1,0 +1,38 @@
+<section class="chapter" id="ch8">
+<span class="ch-num">Chapter 8</span>
+<h2>Keeping score: Strategy's numbers</h2>
+<div class="prose">
+<p>Strategy doesn't judge itself on earnings. It reports its own set of bitcoin measures, and it has changed some of them as the balance sheet changed. Know the definitions cold. The biggest trap is that "mNAV" has three different meanings.</p>
+</div>
+<figure class="figure">
+<h4>Three mNAVs, same company, same week</h4>
+<p class="fl">Each divides some value of the company by some value of its bitcoin. The answer swings from below 1.0x to above it depending on which you pick.</p>
+<div class="tbl"><table>
+<thead><tr><th>Version</th><th>Formula</th><th class="r">About</th><th>Used by</th></tr></thead>
+<tbody>
+<tr><td><b>Basic</b></td><td>Market cap ÷ bitcoin value</td><td class="r">0.92x</td><td>Older trackers. Ignores debt, preferreds and cash</td></tr>
+<tr><td><b>Enterprise value</b></td><td>(Market cap + debt + preferred − cash) ÷ bitcoin value</td><td class="r">1.13x</td><td>Legacy comparison only; the coverage model now uses net mNAV</td></tr>
+<tr class="hl"><td><b>Net</b> (current)</td><td>Share price ÷ (net bitcoin per diluted share × BTC price)</td><td class="r">1.175x</td><td>Estimated workbook reconstruction at Oct 15 prices. Strategy’s current definition; 1.0x issuance gate is a model assumption</td></tr>
+</tbody></table></div>
+<figcaption>Basic and EV: this book's arithmetic at Oct 15 prices. Net: workbook estimate at Oct 15 prices, using dated basic shares and awards. dat-accretion was 1.191x for the week ending Oct 11. These are different snapshots. Always label which mNAV you mean, and its date.</figcaption>
+</figure>
+<figure class="figure">
+<h4>The rest of the scorecard</h4>
+<div class="tbl"><table>
+<thead><tr><th>Measure</th><th>What it means</th><th>How it's calculated</th></tr></thead>
+<tbody>
+<tr><td><b>Bitcoin per share</b></td><td>How much bitcoin stands behind one share</td><td>BTC held ÷ assumed diluted shares. Net BTC subtracts out-of-money debt and preferred claims, adds USD Assets, then divides by fully diluted shares</td></tr>
+<tr><td><b>BTC Yield</b></td><td>Growth in bitcoin per share over a period</td><td>Change in BPS divided by BPS at the beginning of the applicable reference period, under the current issuer methodology</td></tr>
+<tr><td><b>BTC Gain</b></td><td>That growth expressed in coins</td><td>BTC Yield × bitcoin holdings at the start of the applicable reference period</td></tr>
+<tr><td><b>BTC $ Gain</b></td><td>The same in dollars</td><td>BTC Gain × bitcoin price</td></tr>
+<tr><td><b>BTC cover</b> (this book)</td><td>How many times bitcoin covers the claims ahead of common</td><td>Bitcoin value ÷ (debt + preferred notional). 3.4x today</td></tr>
+<tr><td><b>Reserve coverage</b></td><td>How long the cash lasts</td><td>USD Reserve ÷ (annual dividends + interest). ≈ 37 months today; policy floor 12</td></tr>
+</tbody></table></div>
+<figcaption>Strategy's definitions: its investor presentations (e.g. the Aug 24, 2026 FWP glossary). BTC Yield and BTC Gain are company-defined measures, not GAAP. They say nothing about cash, and a premium can create them while the share price falls.</figcaption>
+</figure>
+<div class="warn"><b>Read with care</b>Definitions changed on July 23, 2026, and the BTC Yield/Gain methodology was updated in 2026. Compare only like definitions and dates. The timing does not establish management’s motive. See <a href="https://www.strategy.com/notes">the issuer’s current definitions</a>.</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>Can BTC Yield be positive while MSTR's price falls?</summary><p>Yes. If Strategy sells stock at a premium, bitcoin per share rises even if bitcoin and the stock both fall. BTC Yield measures bitcoin per share, not value per share.</p></details>
+<details><summary>Why does net mNAV come out higher than basic mNAV?</summary><p>The net version first subtracts debt and preferred from the bitcoin, which shrinks the denominator (net bitcoin per share). It also uses diluted shares and counts cash.</p></details>
+</div>
+<p class="meta">Core source: <a href="https://www.strategy.com/notes">issuer definitions</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strategy, explained: the company, every product, and my projects</title>
+<style>
+@font-face{font-family:'Rahil Display';src:url(data:font/ttf;base64,__ANTON__) format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Rahil Plex';src:url(data:font/ttf;base64,__PLEX_REG__) format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Rahil Plex';src:url(data:font/ttf;base64,__PLEX_SEMI__) format('truetype');font-weight:600;font-display:swap}
+:root{--color-canvas:#111214;--color-surface:#202124;--color-ink:#F5F5EF;--color-secondary:#B7B8B1;--color-accent:#FFE500;--color-accent-dark:#FFE500;--color-border:#424348;--color-error:#FFB5B5;--color-error-surface:#3B2025;--color-success:#B8E3BF;--color-selection:#FFE500;--color-figure-surface:#F5F5EF;--color-figure-ink:#111214;--color-figure-secondary:#52545A;--color-figure-canvas:#E9E9E2;--color-figure-border:#C6C7BF;--radius-panel:12px}
+__COMPONENTS__
+/* ---------- Textbook layout (built from the rahil-design tokens) ---------- */
+html{scroll-padding-top:16px}
+.book{display:grid;grid-template-columns:232px minmax(0,1fr);gap:56px;align-items:start}
+.toc-side{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;padding:8px 4px 24px 0;font-size:14.5px;line-height:1.35}
+.toc-side .part{display:block;margin:18px 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-secondary)}
+.toc-side a{display:flex;gap:10px;min-height:32px;align-items:center;color:var(--color-ink);text-decoration:none;padding:2px 0}
+.toc-side a span{color:var(--color-secondary);font-variant-numeric:tabular-nums;width:20px;flex:none}
+.toc-side a:hover{color:var(--color-accent)}
+.toc-mobile{display:none}
+.chapter{padding:64px 0 24px;border-top:1px solid var(--color-border);scroll-margin-top:8px}
+.chapter:first-child{border-top:0;padding-top:24px}
+.ch-num{font-family:'Rahil Display',sans-serif;font-size:20px;color:var(--color-accent);letter-spacing:.04em;margin-bottom:8px;display:block}
+.chapter>h2{font-size:clamp(40px,5vw,64px);max-width:20ch;margin-bottom:24px}
+.chapter h3{font-size:30px;margin:48px 0 14px}
+.chapter h4{font-family:'Rahil Plex',sans-serif;font-weight:600;font-size:19px;margin:28px 0 8px;color:var(--color-ink);text-transform:none}
+.prose{max-width:70ch}
+.prose p{margin:0 0 16px}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:22px;max-width:68ch}
+.prose li{margin:6px 0}
+.lede-big{font-size:22px;line-height:1.5;max-width:58ch;color:var(--color-ink)}
+.key{border-left:3px solid var(--color-accent);padding:6px 0 6px 18px;margin:28px 0;max-width:68ch}
+.key b:first-child{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:6px}
+.warn{border-left:3px solid var(--color-error);padding:6px 0 6px 18px;margin:24px 0;max-width:68ch;color:var(--color-ink)}
+.warn b:first-child{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-error);margin-bottom:6px}
+.check{margin:28px 0;max-width:70ch;border-top:1px solid var(--color-border)}
+.check>p{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-secondary);margin:16px 0 4px}
+.check details{border-bottom:1px solid var(--color-border);margin:0}
+.check summary{font-weight:400;padding:12px 0;min-height:44px}
+.check details p{color:var(--color-secondary);padding:0 0 14px;margin:0}
+.status-row{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:15px;color:var(--color-secondary);margin:20px 0}
+.status-row span{border-left:3px solid var(--color-accent);padding-left:10px}
+.figure{color:var(--color-figure-ink)}
+.figure h4{margin:0 0 4px;color:var(--color-figure-ink);font-size:18px}
+.figure .fl{font-size:15px;color:var(--color-figure-secondary);margin:0 0 20px;max-width:none}
+.tag{display:inline-block;font-size:12.5px;font-weight:600;border:1.5px solid var(--color-figure-ink);border-radius:6px;padding:1px 8px;margin-bottom:12px}
+.num{font-variant-numeric:tabular-nums}
+/* nodes + flows */
+.node{border:1.5px solid var(--color-figure-secondary);border-radius:8px;padding:12px 14px;background:var(--color-figure-surface);min-width:0}
+.node.hot{background:var(--color-accent);border:2px solid var(--color-figure-ink)}
+.node.dark{background:var(--color-figure-ink);color:var(--color-figure-surface);border-color:var(--color-figure-ink)}
+.node b{display:block;font-size:15.5px}
+.node small{display:block;font-size:13.5px;line-height:1.4;color:var(--color-figure-secondary);margin-top:2px}
+.node.hot small{color:var(--color-figure-ink)}
+.node.dark small{color:#C9CAC3}
+.node .v{font-size:21px;font-weight:600;font-variant-numeric:tabular-nums;display:block}
+.arrow{display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--color-figure-ink);min-height:24px}
+.cols3{display:grid;grid-template-columns:minmax(0,1fr) 40px minmax(0,1fr) 40px minmax(0,1fr);gap:10px;align-items:stretch}
+.stackv{display:grid;gap:10px;align-content:start}
+.col-h{font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--color-figure-secondary);margin-bottom:2px}
+.loop{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;counter-reset:s}
+.loop.five{grid-template-columns:repeat(5,minmax(0,1fr))}
+.loop .node{border-radius:0;border-right-width:0}
+.loop .node:first-child{border-radius:8px 0 0 8px}
+.loop .node:last-child{border-radius:0 8px 8px 0;border-right-width:1.5px}
+.loop .node .s{font-size:12px;font-weight:600;color:var(--color-figure-secondary);display:block;margin-bottom:4px}
+.back{font-size:13.5px;color:var(--color-figure-secondary);margin-top:10px;text-align:center}
+/* ladder */
+.ladder{display:grid;gap:0;border-left:3px solid var(--color-figure-ink)}
+.rung{display:grid;grid-template-columns:64px minmax(0,1.1fr) minmax(0,1.6fr) 92px;gap:12px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--color-figure-border);font-size:15px}
+.rung:last-child{border-bottom:0}
+.rung .rk{font-size:12.5px;font-weight:600;color:var(--color-figure-secondary)}
+.rung .nm b{display:block}
+.rung .nm small{color:var(--color-figure-secondary);font-size:13px}
+.rung .bar{height:16px;background:var(--color-figure-secondary)}
+.rung .bar.hot{background:var(--color-accent);outline:1.5px solid var(--color-figure-ink);outline-offset:-1.5px}
+.rung .amt{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.rung.eq{background:var(--color-figure-canvas)}
+/* tables */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums;color:var(--color-figure-ink)}
+th{text-align:left;font-size:12.5px;font-weight:600;color:var(--color-figure-secondary);padding:8px 10px;border-bottom:1.5px solid var(--color-figure-ink);vertical-align:bottom}
+td{padding:9px 10px;border-bottom:1px solid var(--color-figure-border);vertical-align:top}
+td.r,th.r{text-align:right}
+tr.hl td{background:var(--color-figure-canvas)}
+.page table.dark{color:var(--color-ink)}
+.page table.dark th{color:var(--color-secondary);border-color:var(--color-ink)}
+.page table.dark td{border-color:var(--color-border)}
+/* product cards */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:24px}
+.card{background:var(--color-figure-surface);color:var(--color-figure-ink);border-radius:var(--radius-panel);padding:24px;min-width:0}
+.card .tk{font-family:'Rahil Display',sans-serif;font-size:40px;line-height:1;display:block}
+.card .nm{font-size:14px;color:var(--color-figure-secondary);display:block;margin:4px 0 14px}
+.card dl{margin:0;display:grid;gap:0}
+.card dl>div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;padding:8px 0;border-top:1px solid var(--color-figure-border);font-size:14.5px}
+.card dt{font-weight:600;color:var(--color-figure-secondary);font-size:13px}
+.card dd{margin:0;min-width:0}
+.card .one{font-size:16px;font-weight:600;margin-bottom:12px;line-height:1.4}
+.card.new{outline:3px solid var(--color-accent);outline-offset:-3px}
+.pill{display:inline-block;font-size:11.5px;font-weight:600;background:var(--color-accent);border:1.5px solid var(--color-figure-ink);border-radius:4px;padding:0 6px;margin-left:8px;vertical-align:6px;font-family:'Rahil Plex',sans-serif}
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:'';position:absolute;left:104px;top:8px;bottom:8px;width:2px;background:var(--color-figure-ink)}
+.tl li{display:grid;grid-template-columns:92px 24px minmax(0,1fr);padding:7px 0;font-size:15px}
+.tl .d{font-weight:600;text-align:right;padding-right:12px;font-size:14px;font-variant-numeric:tabular-nums}
+.tl .m{width:12px;height:12px;border-radius:50%;background:var(--color-figure-surface);border:2px solid var(--color-figure-ink);margin:5px 0 0 7px;position:relative;z-index:1}
+.tl .m.hot{background:var(--color-accent)}
+.tl .t small{display:block;font-size:13.5px;color:var(--color-figure-secondary);line-height:1.45}
+/* bars */
+.hbar{display:grid;grid-template-columns:150px minmax(0,1fr) 84px;gap:12px;align-items:center;font-size:15px;margin:8px 0}
+.hbar .b{height:22px;background:var(--color-figure-secondary)}
+.hbar .b.hot{background:var(--color-accent);outline:1.5px solid var(--color-figure-ink);outline-offset:-1.5px}
+.hbar .b.ink{background:var(--color-figure-ink)}
+.hbar .a{text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.formula{font:15px/1.6 monospace;background:var(--color-figure-canvas);padding:14px 16px;border-radius:8px;overflow-x:auto;white-space:pre;color:var(--color-figure-ink);margin-top:16px}
+.page .formula.dk{background:var(--color-surface);color:var(--color-ink)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gloss{display:grid;grid-template-columns:200px minmax(0,1fr);gap:0 24px;max-width:900px}
+.gloss dt{font-weight:600;padding:12px 0;border-top:1px solid var(--color-border)}
+.gloss dd{margin:0;padding:12px 0;border-top:1px solid var(--color-border);color:var(--color-secondary)}
+.proj{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.proj .node b{font-size:17px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--color-figure-secondary);margin-top:14px}
+.legend i{display:inline-block;width:16px;height:11px;margin-right:6px;vertical-align:-1px;border:1.5px solid var(--color-figure-secondary)}
+.legend i.hot{background:var(--color-accent);border-color:var(--color-figure-ink)}
+.legend i.g{background:var(--color-figure-secondary)}
+.legend i.k{background:var(--color-figure-ink);border-color:var(--color-figure-ink)}
+svg.chart text{font-family:'Rahil Plex',sans-serif;font-size:13.5px;fill:var(--color-figure-secondary)}
+svg.chart .ink{fill:var(--color-figure-ink)}
+svg.chart .strong{fill:var(--color-figure-ink);font-weight:600}
+svg.chart .ax{stroke:var(--color-figure-secondary);stroke-width:1}
+svg.chart .ref{stroke:var(--color-figure-secondary);stroke-dasharray:4 4}
+svg.chart .ln{stroke:var(--color-figure-ink);stroke-width:2.5;fill:none}
+svg.chart .dot{fill:var(--color-accent);stroke:var(--color-figure-ink);stroke-width:2}
+@media(max-width:1000px){.book{grid-template-columns:minmax(0,1fr)}.toc-side{display:none}.toc-mobile{display:block;margin:8px 0 8px}.toc-mobile ol{columns:2;font-size:15px;padding-left:22px}.toc-mobile li{margin:4px 0}}
+@media(max-width:760px){.cols3{grid-template-columns:minmax(0,1fr)}.cols3 .arrow{transform:rotate(90deg)}.loop{grid-template-columns:minmax(0,1fr)}.loop .node,.loop .node:first-child,.loop .node:last-child{border-radius:0;border-right-width:1.5px;border-bottom-width:0}.loop .node:first-child{border-radius:8px 8px 0 0}.loop .node:last-child{border-radius:0 0 8px 8px;border-bottom-width:1.5px}.cards,.two,.three,.proj{grid-template-columns:minmax(0,1fr)}.rung{grid-template-columns:44px minmax(0,1fr) 78px}.rung .nm{grid-column:2;grid-row:1}.rung .amt{grid-column:3;grid-row:1}.rung .rk{grid-column:1;grid-row:1}.rung .bar-wrap{grid-column:2/4;grid-row:2}.loop.five{grid-template-columns:minmax(0,1fr)}.chartwrap{overflow-x:auto}.chartwrap svg.chart{min-width:620px}.hbar{grid-template-columns:96px minmax(0,1fr) 70px;font-size:14px}.gloss{grid-template-columns:minmax(0,1fr)}.gloss dd{border-top:0;padding-top:0}.toc-mobile ol{columns:1}.tl::before{left:84px}.tl li{grid-template-columns:72px 24px minmax(0,1fr)}.card dl>div{grid-template-columns:minmax(0,1fr);gap:2px}}
+input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.calc-grid label{font-weight:600}.calc-grid output{display:block;font-variant-numeric:tabular-nums;margin:8px 0}.calc-result{font-size:22px;font-weight:600;line-height:1.6}.calc-source{font-size:14px;overflow-wrap:anywhere}@media(max-width:640px){.calc-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+<header class="site-header">
+  <a class="brand" href="#top">Rahil Bhavan</a>
+  <nav class="nav" aria-label="Parts">
+    <a href="#ch1">Company</a><a href="#ch4">Products</a><a href="#ch7">Plumbing</a><a href="#ch10">My projects</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <p class="issue-line">Build Notes · Textbook · Strategy (MSTR)</p>
+  <h1>Strategy, explained from the top</h1>
+  <p class="lede-big">One book on how Strategy works: the bitcoin treasury, every security it sells, the cash machinery behind the dividends, how it keeps score, what can break, and the three projects I built to understand it.</p>
+  <div class="status-row"><span>Figures as of Oct 11–15, 2026 unless marked</span><span>Public filings only</span><span>Not investment advice</span></div>
+  <p class="meta">A student trynna learn. Core balance-sheet inputs and definitions cite filings. Roll-forward estimates and model assumptions are labelled. Some historical timeline details remain secondary-source context. Illustrations use labelled made-up numbers.</p>
+</section>
+
+<details class="toc-mobile"><summary>Contents</summary>
+<ol>
+<li><a href="#ch1">Strategy in one page</a></li><li><a href="#ch2">How it got here</a></li><li><a href="#ch3">The engine</a></li>
+<li><a href="#ch4">The capital stack</a></li><li><a href="#ch5">Every product</a></li><li><a href="#ch6">STRC up close</a></li>
+<li><a href="#ch7">Cash plumbing</a></li><li><a href="#ch8">Keeping score</a></li><li><a href="#ch9">What can break</a></li>
+<li><a href="#ch10">My project map</a></li><li><a href="#ch11">Coverage model</a></li><li><a href="#ch12">dat-accretion</a></li>
+<li><a href="#ch13">MARA credit case</a></li><li><a href="#ch14">Interview prep</a></li><li><a href="#ch15">Trading, tax and accounting</a></li><li><a href="#ch16">Peers</a></li><li><a href="#glossary">Glossary</a></li><li><a href="#sources">Sources</a></li>
+</ol></details>
+
+<div class="book" id="main">
+<nav class="toc-side" aria-label="Contents">
+  <span class="part">Part I · The company</span>
+  <a href="#ch1"><span>1</span>Strategy in one page</a>
+  <a href="#ch2"><span>2</span>How it got here</a>
+  <a href="#ch3"><span>3</span>The engine</a>
+  <span class="part">Part II · The products</span>
+  <a href="#ch4"><span>4</span>The capital stack</a>
+  <a href="#ch5"><span>5</span>Every product</a>
+  <a href="#ch6"><span>6</span>STRC up close</a>
+  <span class="part">Part III · Plumbing &amp; score</span>
+  <a href="#ch7"><span>7</span>Cash plumbing</a>
+  <a href="#ch8"><span>8</span>Keeping score</a>
+  <a href="#ch9"><span>9</span>What can break</a>
+  <span class="part">Part IV · My projects</span>
+  <a href="#ch10"><span>10</span>Project map</a>
+  <a href="#ch11"><span>11</span>Coverage model</a>
+  <a href="#ch12"><span>12</span>dat-accretion</a>
+  <a href="#ch13"><span>13</span>MARA credit case</a>
+  <a href="#ch14"><span>14</span>Interview prep</a>
+  <span class="part">Part V · Market context</span>
+  <a href="#ch15"><span>15</span>Trading, tax &amp; accounting</a>
+  <a href="#ch16"><span>16</span>Peers</a>
+  <span class="part">Appendix</span>
+  <a href="#glossary"><span>A</span>Glossary</a>
+  <a href="#sources"><span>B</span>Sources</a>
+</nav>
+
+<div class="chapters">
+<!--CH1-->
+<!--CH2-->
+<!--CH3-->
+<!--CH4-->
+<!--CH5-->
+<!--CH6-->
+<!--CH7-->
+<!--CH8-->
+<!--CH9-->
+<!--CH10-->
+<!--CH11-->
+<!--CH12-->
+<!--CH13-->
+<!--CH14-->
+<!--CH15-->
+<!--CH16-->
+<!--GLOSSARY-->
+<!--SOURCES-->
+</div>
+</div>
+<footer class="footer">A student trynna learn · Strategy textbook v2 · Built Oct 16, 2026 from public filings · Educational project. Excel verification and Q3 refresh pending.</footer>
+</div>
+</body>
+</html>
