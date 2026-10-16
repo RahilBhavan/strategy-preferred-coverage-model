@@ -13,7 +13,7 @@
 | 9. Missing textbook topics | Market yields, ROC, fair-value accounting, software scale and peer mechanisms added. Yield examples are labelled illustrations, not fresh quotes. |
 | 10. Calculator | Implemented in textbook and project page; snapshot equations match the workbook. Principal and fees are excluded and labelled. |
 | 11. Reader test | Protocol prepared; Rahil volunteered. Responses and follow-up revision remain pending. |
-| 12. Public repo/site | Packaged for GitHub and GitHub Pages. Deployment result is recorded separately. |
+| 12. Public repo/site | Published to GitHub and GitHub Pages. Downloaded workbook hash and deployed calculator behavior verified; see deployment.md. |
 | 13. Nov 10 post | Draft and replacement fields prepared. Dated October rehearsal passes preflight; November version remains blocked on Q3 and native Excel receipts. Nothing posted to X. |
 
 The prior assertion that mNAV alone “decides coverage” is replaced by a conditional explanation. The snapshot is dominated by an assumed gate and registered capacity. The dated path measures when those assumptions cease to fund cash needs.
