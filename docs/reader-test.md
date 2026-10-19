@@ -2,7 +2,7 @@
 
 Status: Rahil volunteered on October 16, 2026. No human responses recorded yet.
 
-Read Chapters 3 (Strategy in one page), 8 (The capital stack), 11 (STRC up close) and 12 (Cash plumbing) of `site/textbook.html`; the v3 expansion renumbered the book without opening this answer key or the check-yourself answers. Take up to 15 minutes. Then close the book and answer these questions in chat:
+Read the chapters titled "Strategy in one page", "The capital stack", "STRC up close" and "Cash plumbing" in `site/textbook.html` (numbers change as the book grows) without opening this answer key or the check-yourself answers. Take up to 15 minutes. Then close the book and answer these questions in chat:
 
 1. Where does the cash for preferred dividends come from? Name two sources and one limitation.
 2. Put debt, STRF, STRC, STRE, STRK, STRD and common in payment-priority order.

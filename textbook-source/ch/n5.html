@@ -1,0 +1,37 @@
+<section class="chapter" id="n5">
+<span class="ch-num">Chapter 16</span>
+<h2>Every lever in a squeeze, priced</h2>
+<div class="prose">
+<p class="lede-big">Suppose Strategy needs to pay $100M of dividends. It has six ways to do it. Each one costs common holders a different amount, and the cheapest one depends on mNAV.</p>
+</div>
+<figure class="figure">
+<span class="tag">First-order arithmetic</span>
+<h4>Paying $100M of dividends: net assets lost by common holders</h4>
+<p class="fl">Two market states: today's net mNAV (1.19x) and a stressed 0.8x. Lower is better for common holders.</p>
+<div class="tbl"><table>
+<thead><tr><th>Lever</th><th class="r">At 1.19x</th><th class="r">At 0.8x</th><th>Hidden cost</th></tr></thead>
+<tbody>
+<tr class="hl"><td><b>Sell MSTR, pay in cash</b></td><td class="r">$84M</td><td class="r">$125M</td><td>Dilution; depends on buyers being there</td></tr>
+<tr><td><b>Pay STRK's dividend in MSTR shares</b></td><td class="r">$84M</td><td class="r">$125M</td><td>Same as selling stock; only works for STRK's ≈ $112M a year</td></tr>
+<tr><td><b>Spend the USD Reserve</b></td><td class="r">$100M</td><td class="r">$100M</td><td>Less runway; the 12-month policy floor</td></tr>
+<tr><td><b>Sell bitcoin</b></td><td class="r">$100M</td><td class="r">$100M</td><td>Fewer coins; tax on gains; price impact; a public signal</td></tr>
+<tr><td><b>Sell more preferred at $97</b></td><td class="r">$0 now</td><td class="r">$0 now</td><td>Creates $103M of new claim plus ~$12M a year forever</td></tr>
+<tr><td><b>Skip STRD's dividend</b></td><td class="r">$0 now</td><td class="r">$0 now</td><td>Legal, but every other preferred would likely reprice lower, raising all future funding costs</td></tr>
+</tbody></table></div>
+<figcaption>Stock-based levers cost $100M ÷ mNAV. Cash and bitcoin cost $100M either way. Preferred issuance and skipping move the cost into the future. Fees, taxes and second-round effects excluded.</figcaption>
+</figure>
+<div class="prose">
+<h4>What the table says</h4>
+<ul>
+<li><b>Above 1.0x, stock is the cheapest source.</b> That's why Strategy funds dividends with ATM sales whenever the premium allows, and why paying STRK in shares beats paying it in cash at 1.19x.</li>
+<li><b>Below 1.0x, cash and bitcoin are cheaper than stock.</b> That's the logic behind both the Reserve and the BTC Monetization Program.</li>
+<li><b>Preferred issuance and skipping only defer the bill.</b> They look free today and cost the most later.</li>
+<li><b>The Reserve is neutral today but buys time.</b> Its real value is that it lets Strategy wait for a better mNAV instead of selling stock or bitcoin at a bad moment.</li>
+</ul>
+</div>
+<div class="key"><b>The single rule behind every decision</b>Raise money from whichever source is most overpriced, and retire whichever claim is most underpriced. Stock when the premium is high. Bitcoin or cash when it's low. Buy back preferreds below $100, sell them above. Fourteen decisions in <a class="xref" href="#d1">Chapter 5</a> are this rule applied as markets changed.</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>At 1.3x net mNAV, what does paying $100M in dividends by selling stock cost common holders?</summary><p>About $77M of net assets ($100M ÷ 1.3), less than paying from cash.</p></details>
+<details><summary>Why isn't selling new preferred "free" even though it costs $0 of net assets today?</summary><p>It creates a new claim (more than $100M if sold below $100) and a dividend paid every year forever. The cost is real, only postponed.</p></details>
+</div>
+</section>
