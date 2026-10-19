@@ -97,6 +97,8 @@ tr.hl td{background:var(--color-figure-canvas)}
 .card dt{font-weight:600;color:var(--color-figure-secondary);font-size:13px}
 .card dd{margin:0;min-width:0}
 .card .one{font-size:16px;font-weight:600;margin-bottom:12px;line-height:1.4}
+.card a,.card a:hover{color:var(--color-figure-ink)}
+.card :focus-visible{outline-color:var(--color-figure-ink)}
 .card.new{outline:3px solid var(--color-accent);outline-offset:-3px}
 .pill{display:inline-block;font-size:11.5px;font-weight:600;background:var(--color-accent);border:1.5px solid var(--color-figure-ink);border-radius:4px;padding:0 6px;margin-left:8px;vertical-align:6px;font-family:'Rahil Plex',sans-serif}
 /* timeline */
@@ -135,7 +137,7 @@ svg.chart .ref{stroke:var(--color-figure-secondary);stroke-dasharray:4 4}
 svg.chart .ln{stroke:var(--color-figure-ink);stroke-width:2.5;fill:none}
 svg.chart .dot{fill:var(--color-accent);stroke:var(--color-figure-ink);stroke-width:2}
 @media(max-width:1000px){.book{grid-template-columns:minmax(0,1fr)}.toc-side{display:none}.toc-mobile{display:block;margin:8px 0 8px}.toc-mobile ol{columns:2;font-size:15px;padding-left:22px}.toc-mobile li{margin:4px 0}}
-@media(max-width:760px){.cols3{grid-template-columns:minmax(0,1fr)}.cols3 .arrow{transform:rotate(90deg)}.loop{grid-template-columns:minmax(0,1fr)}.loop .node,.loop .node:first-child,.loop .node:last-child{border-radius:0;border-right-width:1.5px;border-bottom-width:0}.loop .node:first-child{border-radius:8px 8px 0 0}.loop .node:last-child{border-radius:0 0 8px 8px;border-bottom-width:1.5px}.cards,.two,.three,.proj{grid-template-columns:minmax(0,1fr)}.rung{grid-template-columns:44px minmax(0,1fr) 78px}.rung .nm{grid-column:2;grid-row:1}.rung .amt{grid-column:3;grid-row:1}.rung .rk{grid-column:1;grid-row:1}.rung .bar-wrap{grid-column:2/4;grid-row:2}.loop.five{grid-template-columns:minmax(0,1fr)}.chartwrap{overflow-x:auto}.chartwrap svg.chart{min-width:620px}.hbar{grid-template-columns:96px minmax(0,1fr) 70px;font-size:14px}.gloss{grid-template-columns:minmax(0,1fr)}.gloss dd{border-top:0;padding-top:0}.toc-mobile ol{columns:1}.tl::before{left:84px}.tl li{grid-template-columns:72px 24px minmax(0,1fr)}.card dl>div{grid-template-columns:minmax(0,1fr);gap:2px}}
+@media(max-width:760px){.cols3{grid-template-columns:minmax(0,1fr)}.cols3 .arrow{transform:rotate(90deg)}.loop{grid-template-columns:minmax(0,1fr)}.loop .node,.loop .node:first-child,.loop .node:last-child{border-radius:0;border-right-width:1.5px;border-bottom-width:0}.loop .node:first-child{border-radius:8px 8px 0 0}.loop .node:last-child{border-radius:0 0 8px 8px;border-bottom-width:1.5px}.cards,.two,.three,.proj{grid-template-columns:minmax(0,1fr)}.rung{grid-template-columns:44px minmax(0,1fr) 78px}.rung .nm{grid-column:2;grid-row:1}.rung .amt{grid-column:3;grid-row:1}.rung .rk{grid-column:1;grid-row:1}.rung .bar-wrap{grid-column:2/4;grid-row:2}.loop.five{grid-template-columns:minmax(0,1fr)}.chartwrap{overflow-x:auto}.tbl table{min-width:600px}.chartwrap svg.chart{min-width:620px}.hbar{grid-template-columns:96px minmax(0,1fr) 70px;font-size:14px}.gloss{grid-template-columns:minmax(0,1fr)}.gloss dd{border-top:0;padding-top:0}.toc-mobile ol{columns:1}.tl::before{left:84px}.tl li{grid-template-columns:72px 24px minmax(0,1fr)}.card dl>div{grid-template-columns:minmax(0,1fr);gap:2px}}
 input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.calc-grid label{font-weight:600}.calc-grid output{display:block;font-variant-numeric:tabular-nums;margin:8px 0}.calc-result{font-size:22px;font-weight:600;line-height:1.6}.calc-source{font-size:14px;overflow-wrap:anywhere}@media(max-width:640px){.calc-grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -145,77 +147,121 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <header class="site-header">
   <a class="brand" href="#top">Rahil Bhavan</a>
   <nav class="nav" aria-label="Parts">
-    <a href="#ch1">Company</a><a href="#ch4">Products</a><a href="#ch7">Plumbing</a><a href="#ch10">My projects</a>
+    <a href="#f1">Foundations</a><a href="#ch1">Company</a><a href="#ch4">Products</a><a href="#v1">Judging it</a><a href="#ch10">My projects</a>
   </nav>
 </header>
 
 <section class="hero" id="top">
   <p class="issue-line">Build Notes · Textbook · Strategy (MSTR)</p>
   <h1>Strategy, explained from the top</h1>
-  <p class="lede-big">One book on how Strategy works: the bitcoin treasury, every security it sells, the cash machinery behind the dividends, how it keeps score, what can break, and the three projects I built to understand it.</p>
+  <p class="lede-big">One book on how Strategy works, from first principles: the finance you need, why bitcoin, every decision since 2020 and the reason for it, every security and term, the economics, the cash machinery, how to value it and judge its credit, what can break, and the three projects I built to understand it.</p>
   <div class="status-row"><span>Figures as of Oct 11–15, 2026 unless marked</span><span>Public filings only</span><span>Not investment advice</span></div>
   <p class="meta">A student trynna learn. Core balance-sheet inputs and definitions cite filings. Roll-forward estimates and model assumptions are labelled. Some historical timeline details remain secondary-source context. Illustrations use labelled made-up numbers.</p>
 </section>
 
 <details class="toc-mobile"><summary>Contents</summary>
 <ol>
-<li><a href="#ch1">Strategy in one page</a></li><li><a href="#ch2">How it got here</a></li><li><a href="#ch3">The engine</a></li>
-<li><a href="#ch4">The capital stack</a></li><li><a href="#ch5">Every product</a></li><li><a href="#ch6">STRC up close</a></li>
-<li><a href="#ch7">Cash plumbing</a></li><li><a href="#ch8">Keeping score</a></li><li><a href="#ch9">What can break</a></li>
-<li><a href="#ch10">My project map</a></li><li><a href="#ch11">Coverage model</a></li><li><a href="#ch12">dat-accretion</a></li>
-<li><a href="#ch13">MARA credit case</a></li><li><a href="#ch14">Interview prep</a></li><li><a href="#ch15">Trading, tax and accounting</a></li><li><a href="#ch16">Peers</a></li><li><a href="#glossary">Glossary</a></li><li><a href="#sources">Sources</a></li>
+<li><a href="#f1">The finance you need first</a></li>
+<li><a href="#f2">Bitcoin as a treasury asset</a></li>
+<li><a href="#ch1">Strategy in one page</a></li>
+<li><a href="#ch2">How it got here</a></li>
+<li><a href="#d1">Every big decision, and why</a></li>
+<li><a href="#ch3">The engine</a></li>
+<li><a href="#e1">The economics of the machine</a></li>
+<li><a href="#ch4">The capital stack</a></li>
+<li><a href="#ch5">Every product</a></li>
+<li><a href="#t1">Every term, and why it's there</a></li>
+<li><a href="#ch6">STRC up close</a></li>
+<li><a href="#ch7">Cash plumbing</a></li>
+<li><a href="#ch15">Statements, tax & trading</a></li>
+<li><a href="#ch8">Keeping score</a></li>
+<li><a href="#v1">Valuing the common</a></li>
+<li><a href="#k1">The credit view</a></li>
+<li><a href="#ch9">What can break</a></li>
+<li><a href="#s1">Three futures, quarter by quarter</a></li>
+<li><a href="#g1">Who decides</a></li>
+<li><a href="#ch16">Peers</a></li>
+<li><a href="#ch10">Project map</a></li>
+<li><a href="#ch11">Coverage model</a></li>
+<li><a href="#ch12">dat-accretion</a></li>
+<li><a href="#ch13">MARA credit case</a></li>
+<li><a href="#ch14">Interview prep</a></li>
+<li><a href="#x1">Formula sheet</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#sources">Sources</a></li>
 </ol></details>
 
 <div class="book" id="main">
 <nav class="toc-side" aria-label="Contents">
+  <span class="part">Part 0 · Foundations</span>
+  <a href="#f1"><span>1</span>The finance you need first</a>
+  <a href="#f2"><span>2</span>Bitcoin as a treasury asset</a>
   <span class="part">Part I · The company</span>
-  <a href="#ch1"><span>1</span>Strategy in one page</a>
-  <a href="#ch2"><span>2</span>How it got here</a>
-  <a href="#ch3"><span>3</span>The engine</a>
+  <a href="#ch1"><span>3</span>Strategy in one page</a>
+  <a href="#ch2"><span>4</span>How it got here</a>
+  <a href="#d1"><span>5</span>Every big decision, and why</a>
+  <a href="#ch3"><span>6</span>The engine</a>
+  <a href="#e1"><span>7</span>The economics of the machine</a>
   <span class="part">Part II · The products</span>
-  <a href="#ch4"><span>4</span>The capital stack</a>
-  <a href="#ch5"><span>5</span>Every product</a>
-  <a href="#ch6"><span>6</span>STRC up close</a>
-  <span class="part">Part III · Plumbing &amp; score</span>
-  <a href="#ch7"><span>7</span>Cash plumbing</a>
-  <a href="#ch8"><span>8</span>Keeping score</a>
-  <a href="#ch9"><span>9</span>What can break</a>
-  <span class="part">Part IV · My projects</span>
-  <a href="#ch10"><span>10</span>Project map</a>
-  <a href="#ch11"><span>11</span>Coverage model</a>
-  <a href="#ch12"><span>12</span>dat-accretion</a>
-  <a href="#ch13"><span>13</span>MARA credit case</a>
-  <a href="#ch14"><span>14</span>Interview prep</a>
-  <span class="part">Part V · Market context</span>
-  <a href="#ch15"><span>15</span>Trading, tax &amp; accounting</a>
-  <a href="#ch16"><span>16</span>Peers</a>
+  <a href="#ch4"><span>8</span>The capital stack</a>
+  <a href="#ch5"><span>9</span>Every product</a>
+  <a href="#t1"><span>10</span>Every term, and why it's there</a>
+  <a href="#ch6"><span>11</span>STRC up close</a>
+  <span class="part">Part III · Cash, books & score</span>
+  <a href="#ch7"><span>12</span>Cash plumbing</a>
+  <a href="#ch15"><span>13</span>Statements, tax & trading</a>
+  <a href="#ch8"><span>14</span>Keeping score</a>
+  <span class="part">Part IV · Judging it</span>
+  <a href="#v1"><span>15</span>Valuing the common</a>
+  <a href="#k1"><span>16</span>The credit view</a>
+  <a href="#ch9"><span>17</span>What can break</a>
+  <a href="#s1"><span>18</span>Three futures, quarter by quarter</a>
+  <a href="#g1"><span>19</span>Who decides</a>
+  <a href="#ch16"><span>20</span>Peers</a>
+  <span class="part">Part V · My projects</span>
+  <a href="#ch10"><span>21</span>Project map</a>
+  <a href="#ch11"><span>22</span>Coverage model</a>
+  <a href="#ch12"><span>23</span>dat-accretion</a>
+  <a href="#ch13"><span>24</span>MARA credit case</a>
+  <a href="#ch14"><span>25</span>Interview prep</a>
   <span class="part">Appendix</span>
-  <a href="#glossary"><span>A</span>Glossary</a>
-  <a href="#sources"><span>B</span>Sources</a>
+  <a href="#x1"><span>A</span>Formula sheet</a>
+  <a href="#glossary"><span>B</span>Glossary</a>
+  <a href="#sources"><span>C</span>Sources</a>
 </nav>
 
 <div class="chapters">
+<!--F1-->
+<!--F2-->
 <!--CH1-->
 <!--CH2-->
+<!--D1-->
 <!--CH3-->
+<!--E1-->
 <!--CH4-->
 <!--CH5-->
+<!--T1-->
 <!--CH6-->
 <!--CH7-->
+<!--CH15-->
 <!--CH8-->
+<!--V1-->
+<!--K1-->
 <!--CH9-->
+<!--S1-->
+<!--G1-->
+<!--CH16-->
 <!--CH10-->
 <!--CH11-->
 <!--CH12-->
 <!--CH13-->
 <!--CH14-->
-<!--CH15-->
-<!--CH16-->
+<!--X1-->
 <!--GLOSSARY-->
 <!--SOURCES-->
 </div>
 </div>
-<footer class="footer">A student trynna learn · Strategy textbook v2 · Built Oct 16, 2026 from public filings · Educational project. Excel verification and Q3 refresh pending.</footer>
+<footer class="footer">A student trynna learn · Strategy textbook v3 · Expanded Oct 19, 2026 from public filings · Educational project. Excel verification and Q3 refresh pending.</footer>
 </div>
 </body>
 </html>

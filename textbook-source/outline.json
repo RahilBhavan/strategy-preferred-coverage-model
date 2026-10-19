@@ -1,0 +1,44 @@
+[
+  {"part": "Part 0 · Foundations", "chapters": [
+    ["f1", "The finance you need first"],
+    ["f2", "Bitcoin as a treasury asset"]
+  ]},
+  {"part": "Part I · The company", "chapters": [
+    ["ch1", "Strategy in one page"],
+    ["ch2", "How it got here"],
+    ["d1", "Every big decision, and why"],
+    ["ch3", "The engine"],
+    ["e1", "The economics of the machine"]
+  ]},
+  {"part": "Part II · The products", "chapters": [
+    ["ch4", "The capital stack"],
+    ["ch5", "Every product"],
+    ["t1", "Every term, and why it's there"],
+    ["ch6", "STRC up close"]
+  ]},
+  {"part": "Part III · Cash, books & score", "chapters": [
+    ["ch7", "Cash plumbing"],
+    ["ch15", "Statements, tax & trading"],
+    ["ch8", "Keeping score"]
+  ]},
+  {"part": "Part IV · Judging it", "chapters": [
+    ["v1", "Valuing the common"],
+    ["k1", "The credit view"],
+    ["ch9", "What can break"],
+    ["s1", "Three futures, quarter by quarter"],
+    ["g1", "Who decides"],
+    ["ch16", "Peers"]
+  ]},
+  {"part": "Part V · My projects", "chapters": [
+    ["ch10", "Project map"],
+    ["ch11", "Coverage model"],
+    ["ch12", "dat-accretion"],
+    ["ch13", "MARA credit case"],
+    ["ch14", "Interview prep"]
+  ]},
+  {"part": "Appendix", "appendix": true, "chapters": [
+    ["x1", "Formula sheet"],
+    ["glossary", "Glossary"],
+    ["sources", "Sources"]
+  ]}
+]

@@ -335,6 +335,8 @@ tr.hl td{background:var(--color-figure-canvas)}
 .card dt{font-weight:600;color:var(--color-figure-secondary);font-size:13px}
 .card dd{margin:0;min-width:0}
 .card .one{font-size:16px;font-weight:600;margin-bottom:12px;line-height:1.4}
+.card a,.card a:hover{color:var(--color-figure-ink)}
+.card :focus-visible{outline-color:var(--color-figure-ink)}
 .card.new{outline:3px solid var(--color-accent);outline-offset:-3px}
 .pill{display:inline-block;font-size:11.5px;font-weight:600;background:var(--color-accent);border:1.5px solid var(--color-figure-ink);border-radius:4px;padding:0 6px;margin-left:8px;vertical-align:6px;font-family:'Rahil Plex',sans-serif}
 /* timeline */
@@ -373,7 +375,7 @@ svg.chart .ref{stroke:var(--color-figure-secondary);stroke-dasharray:4 4}
 svg.chart .ln{stroke:var(--color-figure-ink);stroke-width:2.5;fill:none}
 svg.chart .dot{fill:var(--color-accent);stroke:var(--color-figure-ink);stroke-width:2}
 @media(max-width:1000px){.book{grid-template-columns:minmax(0,1fr)}.toc-side{display:none}.toc-mobile{display:block;margin:8px 0 8px}.toc-mobile ol{columns:2;font-size:15px;padding-left:22px}.toc-mobile li{margin:4px 0}}
-@media(max-width:760px){.cols3{grid-template-columns:minmax(0,1fr)}.cols3 .arrow{transform:rotate(90deg)}.loop{grid-template-columns:minmax(0,1fr)}.loop .node,.loop .node:first-child,.loop .node:last-child{border-radius:0;border-right-width:1.5px;border-bottom-width:0}.loop .node:first-child{border-radius:8px 8px 0 0}.loop .node:last-child{border-radius:0 0 8px 8px;border-bottom-width:1.5px}.cards,.two,.three,.proj{grid-template-columns:minmax(0,1fr)}.rung{grid-template-columns:44px minmax(0,1fr) 78px}.rung .nm{grid-column:2;grid-row:1}.rung .amt{grid-column:3;grid-row:1}.rung .rk{grid-column:1;grid-row:1}.rung .bar-wrap{grid-column:2/4;grid-row:2}.loop.five{grid-template-columns:minmax(0,1fr)}.chartwrap{overflow-x:auto}.chartwrap svg.chart{min-width:620px}.hbar{grid-template-columns:96px minmax(0,1fr) 70px;font-size:14px}.gloss{grid-template-columns:minmax(0,1fr)}.gloss dd{border-top:0;padding-top:0}.toc-mobile ol{columns:1}.tl::before{left:84px}.tl li{grid-template-columns:72px 24px minmax(0,1fr)}.card dl>div{grid-template-columns:minmax(0,1fr);gap:2px}}
+@media(max-width:760px){.cols3{grid-template-columns:minmax(0,1fr)}.cols3 .arrow{transform:rotate(90deg)}.loop{grid-template-columns:minmax(0,1fr)}.loop .node,.loop .node:first-child,.loop .node:last-child{border-radius:0;border-right-width:1.5px;border-bottom-width:0}.loop .node:first-child{border-radius:8px 8px 0 0}.loop .node:last-child{border-radius:0 0 8px 8px;border-bottom-width:1.5px}.cards,.two,.three,.proj{grid-template-columns:minmax(0,1fr)}.rung{grid-template-columns:44px minmax(0,1fr) 78px}.rung .nm{grid-column:2;grid-row:1}.rung .amt{grid-column:3;grid-row:1}.rung .rk{grid-column:1;grid-row:1}.rung .bar-wrap{grid-column:2/4;grid-row:2}.loop.five{grid-template-columns:minmax(0,1fr)}.chartwrap{overflow-x:auto}.tbl table{min-width:600px}.chartwrap svg.chart{min-width:620px}.hbar{grid-template-columns:96px minmax(0,1fr) 70px;font-size:14px}.gloss{grid-template-columns:minmax(0,1fr)}.gloss dd{border-top:0;padding-top:0}.toc-mobile ol{columns:1}.tl::before{left:84px}.tl li{grid-template-columns:72px 24px minmax(0,1fr)}.card dl>div{grid-template-columns:minmax(0,1fr);gap:2px}}
 input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.calc-grid label{font-weight:600}.calc-grid output{display:block;font-variant-numeric:tabular-nums;margin:8px 0}.calc-result{font-size:22px;font-weight:600;line-height:1.6}.calc-source{font-size:14px;overflow-wrap:anywhere}@media(max-width:640px){.calc-grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -383,58 +385,251 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <header class="site-header">
   <a class="brand" href="#top">Rahil Bhavan</a>
   <nav class="nav" aria-label="Parts">
-    <a href="#ch1">Company</a><a href="#ch4">Products</a><a href="#ch7">Plumbing</a><a href="#ch10">My projects</a>
+    <a href="#f1">Foundations</a><a href="#ch1">Company</a><a href="#ch4">Products</a><a href="#v1">Judging it</a><a href="#ch10">My projects</a>
   </nav>
 </header>
 
 <section class="hero" id="top">
   <p class="issue-line">Build Notes · Textbook · Strategy (MSTR)</p>
   <h1>Strategy, explained from the top</h1>
-  <p class="lede-big">One book on how Strategy works: the bitcoin treasury, every security it sells, the cash machinery behind the dividends, how it keeps score, what can break, and the three projects I built to understand it.</p>
+  <p class="lede-big">One book on how Strategy works, from first principles: the finance you need, why bitcoin, every decision since 2020 and the reason for it, every security and term, the economics, the cash machinery, how to value it and judge its credit, what can break, and the three projects I built to understand it.</p>
   <div class="status-row"><span>Figures as of Oct 11–15, 2026 unless marked</span><span>Public filings only</span><span>Not investment advice</span></div>
   <p class="meta">A student trynna learn. Core balance-sheet inputs and definitions cite filings. Roll-forward estimates and model assumptions are labelled. Some historical timeline details remain secondary-source context. Illustrations use labelled made-up numbers.</p>
 </section>
 
 <details class="toc-mobile"><summary>Contents</summary>
 <ol>
-<li><a href="#ch1">Strategy in one page</a></li><li><a href="#ch2">How it got here</a></li><li><a href="#ch3">The engine</a></li>
-<li><a href="#ch4">The capital stack</a></li><li><a href="#ch5">Every product</a></li><li><a href="#ch6">STRC up close</a></li>
-<li><a href="#ch7">Cash plumbing</a></li><li><a href="#ch8">Keeping score</a></li><li><a href="#ch9">What can break</a></li>
-<li><a href="#ch10">My project map</a></li><li><a href="#ch11">Coverage model</a></li><li><a href="#ch12">dat-accretion</a></li>
-<li><a href="#ch13">MARA credit case</a></li><li><a href="#ch14">Interview prep</a></li><li><a href="#ch15">Trading, tax and accounting</a></li><li><a href="#ch16">Peers</a></li><li><a href="#glossary">Glossary</a></li><li><a href="#sources">Sources</a></li>
+<li><a href="#f1">The finance you need first</a></li>
+<li><a href="#f2">Bitcoin as a treasury asset</a></li>
+<li><a href="#ch1">Strategy in one page</a></li>
+<li><a href="#ch2">How it got here</a></li>
+<li><a href="#d1">Every big decision, and why</a></li>
+<li><a href="#ch3">The engine</a></li>
+<li><a href="#e1">The economics of the machine</a></li>
+<li><a href="#ch4">The capital stack</a></li>
+<li><a href="#ch5">Every product</a></li>
+<li><a href="#t1">Every term, and why it's there</a></li>
+<li><a href="#ch6">STRC up close</a></li>
+<li><a href="#ch7">Cash plumbing</a></li>
+<li><a href="#ch15">Statements, tax & trading</a></li>
+<li><a href="#ch8">Keeping score</a></li>
+<li><a href="#v1">Valuing the common</a></li>
+<li><a href="#k1">The credit view</a></li>
+<li><a href="#ch9">What can break</a></li>
+<li><a href="#s1">Three futures, quarter by quarter</a></li>
+<li><a href="#g1">Who decides</a></li>
+<li><a href="#ch16">Peers</a></li>
+<li><a href="#ch10">Project map</a></li>
+<li><a href="#ch11">Coverage model</a></li>
+<li><a href="#ch12">dat-accretion</a></li>
+<li><a href="#ch13">MARA credit case</a></li>
+<li><a href="#ch14">Interview prep</a></li>
+<li><a href="#x1">Formula sheet</a></li>
+<li><a href="#glossary">Glossary</a></li>
+<li><a href="#sources">Sources</a></li>
 </ol></details>
 
 <div class="book" id="main">
 <nav class="toc-side" aria-label="Contents">
+  <span class="part">Part 0 · Foundations</span>
+  <a href="#f1"><span>1</span>The finance you need first</a>
+  <a href="#f2"><span>2</span>Bitcoin as a treasury asset</a>
   <span class="part">Part I · The company</span>
-  <a href="#ch1"><span>1</span>Strategy in one page</a>
-  <a href="#ch2"><span>2</span>How it got here</a>
-  <a href="#ch3"><span>3</span>The engine</a>
+  <a href="#ch1"><span>3</span>Strategy in one page</a>
+  <a href="#ch2"><span>4</span>How it got here</a>
+  <a href="#d1"><span>5</span>Every big decision, and why</a>
+  <a href="#ch3"><span>6</span>The engine</a>
+  <a href="#e1"><span>7</span>The economics of the machine</a>
   <span class="part">Part II · The products</span>
-  <a href="#ch4"><span>4</span>The capital stack</a>
-  <a href="#ch5"><span>5</span>Every product</a>
-  <a href="#ch6"><span>6</span>STRC up close</a>
-  <span class="part">Part III · Plumbing &amp; score</span>
-  <a href="#ch7"><span>7</span>Cash plumbing</a>
-  <a href="#ch8"><span>8</span>Keeping score</a>
-  <a href="#ch9"><span>9</span>What can break</a>
-  <span class="part">Part IV · My projects</span>
-  <a href="#ch10"><span>10</span>Project map</a>
-  <a href="#ch11"><span>11</span>Coverage model</a>
-  <a href="#ch12"><span>12</span>dat-accretion</a>
-  <a href="#ch13"><span>13</span>MARA credit case</a>
-  <a href="#ch14"><span>14</span>Interview prep</a>
-  <span class="part">Part V · Market context</span>
-  <a href="#ch15"><span>15</span>Trading, tax &amp; accounting</a>
-  <a href="#ch16"><span>16</span>Peers</a>
+  <a href="#ch4"><span>8</span>The capital stack</a>
+  <a href="#ch5"><span>9</span>Every product</a>
+  <a href="#t1"><span>10</span>Every term, and why it's there</a>
+  <a href="#ch6"><span>11</span>STRC up close</a>
+  <span class="part">Part III · Cash, books & score</span>
+  <a href="#ch7"><span>12</span>Cash plumbing</a>
+  <a href="#ch15"><span>13</span>Statements, tax & trading</a>
+  <a href="#ch8"><span>14</span>Keeping score</a>
+  <span class="part">Part IV · Judging it</span>
+  <a href="#v1"><span>15</span>Valuing the common</a>
+  <a href="#k1"><span>16</span>The credit view</a>
+  <a href="#ch9"><span>17</span>What can break</a>
+  <a href="#s1"><span>18</span>Three futures, quarter by quarter</a>
+  <a href="#g1"><span>19</span>Who decides</a>
+  <a href="#ch16"><span>20</span>Peers</a>
+  <span class="part">Part V · My projects</span>
+  <a href="#ch10"><span>21</span>Project map</a>
+  <a href="#ch11"><span>22</span>Coverage model</a>
+  <a href="#ch12"><span>23</span>dat-accretion</a>
+  <a href="#ch13"><span>24</span>MARA credit case</a>
+  <a href="#ch14"><span>25</span>Interview prep</a>
   <span class="part">Appendix</span>
-  <a href="#glossary"><span>A</span>Glossary</a>
-  <a href="#sources"><span>B</span>Sources</a>
+  <a href="#x1"><span>A</span>Formula sheet</a>
+  <a href="#glossary"><span>B</span>Glossary</a>
+  <a href="#sources"><span>C</span>Sources</a>
 </nav>
 
 <div class="chapters">
-<section class="chapter" id="ch1">
+<section class="chapter" id="f1">
 <span class="ch-num">Chapter 1</span>
+<h2>The finance you need first</h2>
+<div class="prose">
+<p class="lede-big">Everything about Strategy rests on about ten ideas. Learn these first and every later chapter becomes a combination of them.</p>
+<p>No prior finance knowledge is assumed. Each idea gets a plain definition, a small example with made-up numbers, and the reason it matters for Strategy.</p>
+</div>
+
+<h3>1. A company is a pile of assets with claims on it</h3>
+<div class="prose">
+<p>A company owns things (cash, bitcoin, software) and owes things. Everyone who gave it money holds a <b>claim</b>. The rule that matters most is simple: <b>assets = claims</b>. If the assets shrink, somebody's claim shrinks. Finance is mostly about deciding whose.</p>
+</div>
+<figure class="figure">
+<span class="tag">Illustration: made-up numbers</span>
+<h4>A $100 company, three kinds of claim</h4>
+<p class="fl">The same $100 of assets, carved up three ways.</p>
+<div class="hbar"><span>Debt (lenders)</span><div><div class="b ink" style="width:30%"></div></div><span class="a">$30</span></div>
+<div class="hbar"><span>Preferred</span><div><div class="b" style="width:20%"></div></div><span class="a">$20</span></div>
+<div class="hbar"><span>Common (owners)</span><div><div class="b hot" style="width:50%"></div></div><span class="a">$50</span></div>
+<figcaption>If the assets fall to $60, lenders still get $30 and preferred holders $20. Common holders absorb the whole loss and are left with $10, an 80% fall from a 40% drop in assets. That is <b>leverage</b>.</figcaption>
+</figure>
+
+<h3>2. Debt, preferred and common are three deals</h3>
+<figure class="figure">
+<div class="tbl"><table>
+<thead><tr><th></th><th>Debt (bonds, notes)</th><th>Preferred stock</th><th>Common stock</th></tr></thead>
+<tbody>
+<tr><td><b>What you get</b></td><td>Fixed interest + your money back on a date</td><td>A set dividend, usually forever</td><td>Whatever is left: all the upside</td></tr>
+<tr><td><b>If the company can't pay</b></td><td>Default: lenders can force bankruptcy</td><td>Dividends can be skipped; no forced bankruptcy</td><td>Gets nothing until everyone else is paid</td></tr>
+<tr><td><b>Who's paid first</b></td><td>First</td><td>Second</td><td>Last</td></tr>
+<tr><td><b>Votes</b></td><td>No</td><td>Usually no</td><td>Yes</td></tr>
+<tr><td><b>Cost to the company</b></td><td>Lowest (safest for the buyer)</td><td>Middle</td><td>Highest expected cost, but no cash payments required</td></tr>
+</tbody></table></div>
+<figcaption>Why it matters: Strategy uses all three. Preferred stock is the middle option. It costs more than debt, but a skipped dividend can't bankrupt the company. That's one clear advantage over more bonds, though Strategy's own stated reasons were different (<a class="xref" href="#d1">Chapter 5</a>).</figcaption>
+</figure>
+
+<h3>3. Seniority decides who gets paid in a bad outcome</h3>
+<div class="prose">
+<p><b>Senior</b> claims are paid in full before <b>junior</b> ones get anything. This order is written into legal documents (bond indentures for debt, <b>certificates of designation</b> for preferred stock). A junior claim is riskier, so buyers demand a higher return for it. That's why Strategy's most junior preferred (STRD) pays more than a more senior one (STRK).</p>
+</div>
+
+<h3>4. Price and yield move in opposite directions</h3>
+<div class="prose">
+<p>A preferred with a <b>$100 face value</b> (also called stated amount or liquidation preference) and a 10% rate pays $10 a year no matter what it trades at. What changes is the <b>yield</b> a buyer earns: the $10 divided by the price they paid.</p>
+</div>
+<figure class="figure">
+<span class="tag">Illustration</span>
+<h4>The same $10 dividend at three prices</h4>
+<div class="tbl"><table>
+<thead><tr><th>Market price</th><th class="r">Annual dividend</th><th class="r">Yield to the buyer</th><th>What the market is saying</th></tr></thead>
+<tbody>
+<tr><td>$120</td><td class="r">$10</td><td class="r">8.3%</td><td>"This is safe; I'll accept less"</td></tr>
+<tr class="hl"><td>$100</td><td class="r">$10</td><td class="r">10.0%</td><td>Priced at face value</td></tr>
+<tr><td>$80</td><td class="r">$10</td><td class="r">12.5%</td><td>"This is risky; pay me more"</td></tr>
+</tbody></table></div>
+<figcaption>Why it matters: a preferred's price is the market's live vote on how risky it is. Below $100 also makes new issuance expensive, because Strategy would get less than $100 for a $100 claim. STRC's whole design (<a class="xref" href="#ch6">Chapter 11</a>) is about keeping its price near $100.</figcaption>
+</figure>
+
+<h3>5. Leverage cuts both ways</h3>
+<div class="prose">
+<p><b>Leverage</b> means using borrowed or fixed-cost money to own more of something. If the asset earns more than the money costs, owners gain more than the asset did. If it earns less, owners lose more. Fixed claims don't shrink when the asset does. <a class="xref" href="#e1">Chapter 7</a> works this through with Strategy's numbers.</p>
+</div>
+
+<h3>6. Every source of money has a cost</h3>
+<div class="prose">
+<p>The <b>cost of capital</b> is what a company gives up to get money. For debt it's the interest rate. For preferred it's the dividend rate. For common stock it's harder to see: there's no payment, but new shares give away a slice of all future value. A company creates value only if what it does with the money earns more than that cost. For Strategy the "investment" is bitcoin, so the test is whether bitcoin rises faster than its cost of capital.</p>
+</div>
+
+<h3>7. A convertible is a bond with an option attached</h3>
+<figure class="figure">
+<div class="cols3">
+  <div class="node"><b>A bond</b><small>Pays a coupon and returns the money at maturity</small></div>
+  <div class="arrow" aria-hidden="true">+</div>
+  <div class="node"><b>A call option</b><small>The right to swap the bond for shares at a set <b>conversion price</b>, usually 30–60% above today's price</small></div>
+  <div class="arrow" aria-hidden="true">=</div>
+  <div class="node hot"><b>A convertible note</b><small>Buyers accept a tiny or zero coupon because the option is valuable</small></div>
+</div>
+<figcaption>The more volatile the stock, the more the option is worth, and the less interest the company has to pay. MSTR is one of the most volatile large stocks, which is why Strategy could borrow billions at 0%. The catch: if the stock stays below the conversion price, holders want cash back, and some notes let them demand it early (a <b>put</b>).</figcaption>
+</figure>
+
+<h3>8. "Perpetual" means never paying the money back</h3>
+<div class="prose">
+<p>All five Strategy preferreds are <b>perpetual</b>. There's no maturity date, so Strategy never has to find $14B to repay them. The price is paying the dividend forever, unless Strategy chooses to buy them back. That trade removes <b>refinancing risk</b>, the danger of a big repayment falling due in a bad market. That's a big economic advantage of preferreds over bonds, even though Strategy hasn't named it as a reason.</p>
+</div>
+
+<h3>9. NAV and premium</h3>
+<div class="prose">
+<p><b>Net asset value</b> (NAV) is what the assets would be worth to owners if you sold them all and paid every claim. For Strategy that's roughly bitcoin plus cash minus debt and preferred. The <b>premium</b> is how much more than that the market pays for the shares. <b>mNAV</b> is the ratio: 1.0x means no premium, 1.5x means the market pays $1.50 for each $1 of net assets. A premium lets a company sell shares for more than the assets behind them (<a class="xref" href="#ch3">Chapter 6</a>).</p>
+</div>
+
+<h3>10. How public companies actually raise money</h3>
+<div class="prose">
+<p>A company files a <b>shelf registration</b> with the SEC that lets it sell securities over time. It can then do a large one-off <b>offering</b> (an IPO for a new preferred, for example) or an <b>at-the-market (ATM) program</b>, which sells small amounts into normal trading every day through a broker. Strategy uses ATMs heavily because they are cheap, quick and quiet. The limit is that each day's sales are a small share of trading volume, and buyers have to want the shares.</p>
+</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>Assets fall 20%. Who loses money first: debt, preferred or common?</summary><p>Common. Its claim is whatever's left, so it absorbs losses until it's gone. Only then do preferred, and then debt, lose anything.</p></details>
+<details><summary>A preferred pays $8 a year and trades at $64. What's its yield, and what does the price suggest?</summary><p>12.5%. It trades well below its $100 face value, so the market sees it as risky (or rates are high).</p></details>
+<details><summary>Why could Strategy borrow at 0% interest?</summary><p>Buyers got a conversion option on a very volatile stock. The option was worth more to them than a coupon.</p></details>
+</div>
+</section>
+
+<section class="chapter" id="f2">
+<span class="ch-num">Chapter 2</span>
+<h2>Bitcoin as a treasury asset</h2>
+<div class="prose">
+<p class="lede-big">Strategy's whole design follows from three facts about bitcoin. Its supply is fixed. It produces no cash. And its price swings far more than almost anything else a company might hold.</p>
+</div>
+
+<h3>Fact 1: the supply is fixed</h3>
+<div class="prose">
+<p>The bitcoin protocol will only ever create 21 million coins. New coins are released on a schedule that halves about every four years, and roughly 95% have already been mined. No central bank can issue more. That's the core of the bull case: if demand keeps rising and supply can't, the price has to absorb the difference.</p>
+<p>Strategy's 848,250 BTC are about <b>4% of all the bitcoin that will ever exist</b> (848,250 ÷ 21,000,000).</p>
+</div>
+
+<h3>Fact 2: it pays nothing</h3>
+<div class="prose">
+<p>A building earns rent. A bond pays interest. A share in a profitable company earns profits. Bitcoin earns nothing by itself. The only way to make money from holding it is for the price to rise, or to sell some.</p>
+</div>
+<div class="key"><b>Why this shapes everything</b>A company that owns a no-income asset but owes $1.56B a year of dividends and interest has a permanent cash gap. Every structure in this book (the USD Reserve, the ATM programs, STRK's pay-in-shares option, the BTC Monetization Program) is a way to fill that gap without selling the bitcoin.</div>
+
+<h3>Fact 3: it is very volatile</h3>
+<div class="prose">
+<p>Bitcoin has fallen by more than 70% from a peak several times, and has more than doubled in a year several times. For a company, that means the value of its main asset can halve while its dollar obligations stay the same. Volatility also has an upside: it makes options on MSTR valuable, which is why convertible buyers accepted 0% interest (<a class="xref" href="#f1">Chapter 1</a>, idea 7).</p>
+</div>
+<figure class="figure">
+<h4>Holding bitcoin vs holding cash, from a treasurer's chair</h4>
+<div class="tbl"><table>
+<thead><tr><th></th><th>Cash / Treasury bills</th><th>Bitcoin</th></tr></thead>
+<tbody>
+<tr><td><b>Income</b></td><td>Interest (near zero in 2020, higher since)</td><td>None</td></tr>
+<tr><td><b>Price risk</b></td><td>Very low in dollars; loses value to inflation</td><td>Very high</td></tr>
+<tr><td><b>Pays a dollar bill?</b></td><td>Yes, directly</td><td>Only by selling</td></tr>
+<tr><td><b>Long-run argument</b></td><td>Safety and liquidity</td><td>Scarcity; a hedge against currency debasement</td></tr>
+<tr><td><b>Accounting (since 2025)</b></td><td>Face value</td><td>Fair value: every price move hits reported profit</td></tr>
+</tbody></table></div>
+<figcaption>Strategy's 2020 decision was to swap the left column for the right one (<a class="xref" href="#d1">Chapter 5</a>). Everything since has been about scaling that swap and managing its consequences.</figcaption>
+</figure>
+
+<h3>Why a company, not just an ETF?</h3>
+<div class="prose">
+<p>Since January 2024, anyone can buy bitcoin through US spot ETFs for a small fee. So why would an investor hold MSTR instead? Strategy's answer has three parts:</p>
+<ol>
+<li><b>Leverage without margin calls.</b> MSTR holders get more than 1x bitcoin exposure through Strategy's debt and preferreds, and nobody can force them to sell in a crash.</li>
+<li><b>Growth in bitcoin per share.</b> An ETF share always holds the same amount of bitcoin. A Strategy share can hold more over time if the company sells stock at a premium (<a class="xref" href="#ch3">Chapter 6</a>).</li>
+<li><b>Products ETFs can't offer.</b> Income securities (the preferreds) and volatility (MSTR options, converts) carved out of the same bitcoin.</li>
+</ol>
+<p>The counter-argument is just as simple. The ETF has no debt, no dividends to fund, no management discretion, and trades at its asset value. If Strategy's premium disappears, the main reason to prefer it weakens (<a class="xref" href="#v1">Chapter 15</a>).</p>
+</div>
+
+<h3>Custody and control</h3>
+<div class="prose">
+<p>Strategy holds its bitcoin through institutional custodians. Its convertible notes are unsecured, and its filings describe the preferreds as not collateralized by the bitcoin. That's a choice with history. In 2021–22 it did borrow against bitcoin, and the 2022 crash made that debt a liability (<a class="xref" href="#d1">Chapter 5</a>). Unpledged coins can't be seized in a margin call. They also give preferred holders no direct claim on the bitcoin. Their cushion is the company's overall balance sheet.</p>
+</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>Why can't Strategy pay dividends "out of" its bitcoin without selling it?</summary><p>Bitcoin produces no income. Dividends are dollars (or euros), so they must come from cash on hand, new securities sold, the small software business, or selling bitcoin.</p></details>
+<details><summary>Give one reason to own MSTR rather than a bitcoin ETF, and one reason not to.</summary><p>For: leveraged bitcoin exposure that can't be margin-called, plus potential growth in bitcoin per share. Against: you pay a premium, take on dividend and debt obligations, and depend on management's decisions.</p></details>
+</div>
+</section>
+
+<section class="chapter" id="ch1">
+<span class="ch-num">Chapter 3</span>
 <h2>Strategy in one page</h2>
 <div class="prose">
 <p class="lede-big">Strategy is a company that turns money raised in the capital markets into bitcoin, then sells new kinds of securities whose value rests on that bitcoin.</p>
@@ -471,7 +666,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
     <div class="node"><b>More bitcoin</b><small>Whatever is left after the above</small></div>
   </div>
 </div>
-<figcaption>Holdings and cash as of Oct 11, 2026 (weekly 8-K). Annual charges are this book's estimate from the filings (Chapter 11), which tie to management's own $1.703B figure once recent buybacks are taken out.</figcaption>
+<figcaption>Holdings and cash as of Oct 11, 2026 (weekly 8-K). Annual charges are this book's estimate from the filings (<a class="xref" href="#ch11">Chapter 22</a>), which tie to management's own $1.703B figure once recent buybacks are taken out.</figcaption>
 </figure>
 <div class="key"><b>The one idea</b>Strategy is a bet that bitcoin will rise faster than the cost of the money used to buy it. Common stock holders own the upside. Preferred and note holders get paid first, in dollars, from a company whose main asset pays no dollars. Nearly every question about Strategy is a version of "is that still working?"</div>
 <div class="check"><p>Check yourself</p>
@@ -481,7 +676,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
 <section class="chapter" id="ch2">
-<span class="ch-num">Chapter 2</span>
+<span class="ch-num">Chapter 4</span>
 <h2>How it got here</h2>
 <div class="prose">
 <p>The story has three phases. From 2020 to 2024 Strategy bought bitcoin with common stock and cheap convertible debt. In 2025 it launched a preferred stock almost every few months. In 2026 the focus shifted to defending those preferreds: a cash reserve, a higher STRC rate, buybacks and new rules for when it will sell stock.</p>
@@ -517,8 +712,143 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <div class="key"><b>The pattern</b>Each new product answered a problem the last one created. Converts needed MSTR to keep rising; preferreds reached investors who wanted income; STRC's variable rate let Strategy adjust the price of money monthly; the Reserve answered "where do the dividends come from?"; buybacks and issuance discipline near 1x answered "what if the stock trades below its bitcoin?"</div>
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
+<section class="chapter" id="d1">
+<span class="ch-num">Chapter 5</span>
+<h2>Every big decision, and why</h2>
+<div class="prose">
+<p class="lede-big">Strategy didn't arrive at five preferreds and a cash reserve by design. Each step solved a problem the previous step created. This chapter walks through fourteen decisions in order: the problem, the options, the reason given, and what it cost.</p>
+<p>Each decision separates two kinds of reason. <b>Stated</b> means Strategy said it in a filing or press release, linked in Appendix B. <b>Analysis</b> means my reading of the economics. Strategy didn't necessarily say it.</p>
+</div>
+
+<h3>Era 1 · 2020–2021: swapping cash for bitcoin</h3>
+<div class="cards">
+<article class="card"><span class="tk">2020</span><span class="nm">Turn the treasury into bitcoin</span>
+<p class="one">Problem: more than $500M of cash in a slow-growing software company, earning little.</p>
+<dl>
+<div><dt>Options</dt><dd>Keep the cash; buy back shares; invest in "stocks, bonds, commodities such as gold, digital assets such as bitcoin" (Jul 28, 2020 release)</dd></div>
+<div><dt>What it did</dt><dd>Both. A Dutch-auction buyback of up to $250M attracted only $60.5M of shares. On Aug 11 it bought 21,454 BTC for $250M. In Sep 2020 the board adopted bitcoin as its primary treasury reserve asset</dd></div>
+<div><dt>Stated</dt><dd>Assets with "potentially higher returns than holding cash" (then-CFO Phong Le). On Aug 11, Saylor cited COVID, quantitative easing and the "depreciating effect on the long-term real value of fiat currencies"</dd></div>
+<div><dt>Cost</dt><dd>A volatile, no-income asset replaced a safe one. The company's value became tied to one price</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">2020–21</span><span class="nm">Borrow with convertibles</span>
+<p class="one">Problem: the cash was spent, but the bet needed scale.</p>
+<dl>
+<div><dt>What it did</dt><dd>$650M of 0.75% convertibles due 2025 (Dec 2020), then $1.05B at 0% due 2027 (Feb 2021)</dd></div>
+<div><dt>Analysis</dt><dd>MSTR's volatility made the conversion option valuable, so buyers accepted almost no interest (<a class="xref" href="#f1">Chapter 1</a>, idea 7)</dd></div>
+<div><dt>Cost</dt><dd>Dilution if the notes convert; repayment if they don't</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">2021–22</span><span class="nm">Borrow against the bitcoin (and regret it)</span>
+<p class="one">Problem: more leverage, faster.</p>
+<dl>
+<div><dt>What it did</dt><dd>$500M of 6.125% senior secured notes (Jun 2021), secured partly by bitcoin. A $205M term loan from Silvergate secured by bitcoin (Mar 2022)</dd></div>
+<div><dt>What happened</dt><dd>The 2022 crash took bitcoin to about $15,500. Press reports put the loan's margin-call level near $21,000. Strategy prepaid it in Mar 2023 for about $161M, 22% below face. It redeemed the secured notes in Sep 2024 with convertible proceeds, releasing about 69,080 BTC from the lien</dd></div>
+<div><dt>Analysis</dt><dd>The lesson that shaped everything since: keep the bitcoin unpledged. Every later security is unsecured</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">2022</span><span class="nm">Split the jobs at the top</span>
+<p class="one">Problem: a CEO running a software company and a bitcoin strategy at once.</p>
+<dl>
+<div><dt>What it did</dt><dd>From Aug 8, 2022, Saylor became Executive Chairman and Phong Le became CEO</dd></div>
+<div><dt>Stated</dt><dd>Lets Saylor "focus more on our bitcoin acquisition strategy"</dd></div>
+<div><dt>Context</dt><dd>That year Strategy booked $1.29B of bitcoin impairments and a $1.47B net loss under the old accounting rules, which wrote prices down but never back up</dd></div>
+</dl></article>
+</div>
+
+<h3>Era 2 · 2024–2025: scaling with a premium</h3>
+<div class="cards">
+<article class="card"><span class="tk">2024</span><span class="nm">Sell stock at a premium, borrow at 0%</span>
+<p class="one">Problem: none. This was the opportunity. MSTR traded far above its bitcoin, roughly 3.4x on the basic measure in Nov 2024 (a secondary estimate).</p>
+<dl>
+<div><dt>What it did</dt><dd>Announced the "21/21 Plan" in Oct 2024: $21B of equity and $21B of fixed income. Sold $3B of 0% convertibles due 2029 at a ~55% conversion premium (conversion price ≈ $672). MSTR joined the Nasdaq-100 in Dec 2024</dd></div>
+<div><dt>Analysis</dt><dd>At a high premium, equity is the cheapest money there is. Each dollar of stock buys well over a dollar of bitcoin per share (<a class="xref" href="#ch3">Chapter 6</a>)</dd></div>
+<div><dt>Cost</dt><dd>Reflexivity: the strategy depends on the premium it creates</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">2025</span><span class="nm">Adopt fair-value accounting</span>
+<p class="one">Problem: old rules made bitcoin a one-way loss on the income statement.</p>
+<dl>
+<div><dt>What it did</dt><dd>Adopted ASU 2023-08 from 2025: bitcoin is marked to market every quarter</dd></div>
+<div><dt>Side effect</dt><dd>Unrealized gains raised the risk of the 15% corporate alternative minimum tax. After Treasury and IRS interim guidance (Notice 2025-49, Sep 30, 2025), Strategy said on Oct 1, 2025 it "no longer expects to become subject to CAMT due to unrealized gains"</dd></div>
+<div><dt>Cost</dt><dd>Reported profit now swings by billions with the price, and none of it is cash (<a class="xref" href="#ch15">Chapter 13</a>)</dd></div>
+</dl></article>
+
+<article class="card new"><span class="tk">2025</span><span class="nm">Launch preferred stock</span>
+<p class="one">Problem: the "fixed income" half of the plan needed buyers beyond convertible funds.</p>
+<dl>
+<div><dt>What it did</dt><dd>STRK (Jan 30: 7.3m shares at $80), STRF (Mar 20: 8.5m at $85), STRD (Jun 5: 11.76m at $85), STRC (Jul 24: 28.0m at $90)</dd></div>
+<div><dt>Stated</dt><dd>Part of the 21/21 Plan's fixed income. STRF was pitched as "the pristine fixed income preferred stock" for "the most conservative fixed income investors… to draw a new class of investors into the Bitcoin universe." STRK was "for the bitcoin curious"</dd></div>
+<div><dt>Analysis</dt><dd>Perpetual means no refinancing wall. Unsecured keeps the coins free. Unlike debt, a skipped dividend can't force bankruptcy. Strategy didn't state these as reasons</dd></div>
+<div><dt>Cost</dt><dd>8–12% a year forever, versus 0% on converts</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">2025</span><span class="nm">Make one preferred variable (STRC)</span>
+<p class="one">Problem: fixed-rate preferreds' prices drift away from $100, so new issuance gets expensive.</p>
+<dl>
+<div><dt>What it did</dt><dd>STRC's rate is reset monthly; it started at 9% and reached 12% by Jul 2026. Strategy can also call it at $101 at any time</dd></div>
+<div><dt>Stated (Oct 2026 proxy)</dt><dd>The "current intention to maintain STRC Stock's trading price at or close to its stated amount of $100"</dd></div>
+<div><dt>Cost</dt><dd>The rate rises under stress (<a class="xref" href="#ch6">Chapter 11</a>)</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">Nov 2025</span><span class="nm">Sell in euros (STRE)</span>
+<p class="one">Problem: US income buyers are one pool. Europe is another.</p>
+<dl>
+<div><dt>What it did</dt><dd>7.75m shares at €80 (upsized from €350M to €620M), listed in Luxembourg</dd></div>
+<div><dt>Analysis</dt><dd>New investors, same bitcoin. Selling at €80 gave buyers 12.5% on their cost</dd></div>
+<div><dt>Cost</dt><dd>Currency risk and no euro reserve</dd></div>
+</dl></article>
+</div>
+
+<h3>Era 3 · late 2025–2026: defending the credit</h3>
+<div class="cards">
+<article class="card"><span class="tk">Dec 2025</span><span class="nm">Hold dollars on purpose (USD Reserve)</span>
+<p class="one">Problem: with the premium shrinking, "we'll sell stock to pay dividends" stopped being reassuring.</p>
+<dl>
+<div><dt>What it did</dt><dd>Set aside $1.44B for dividends and interest. It reached $4.88B by Oct 2026</dd></div>
+<div><dt>Analysis</dt><dd>Turns a promise into a balance investors can check every week</dd></div>
+<div><dt>Cost</dt><dd>Cash that isn't buying bitcoin</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">Jun 2026</span><span class="nm">Write the rules down (capital framework)</span>
+<p class="one">Problem: STRC traded in the high $80s; investors wanted clear policies.</p>
+<dl>
+<div><dt>What it did</dt><dd>Reserve floor of 12 months of charges; STRC to 12%; a $1.0B preferred buyback (raised to $2.0B in Sep) with STRC first; a $1.0B MSTR buyback; the BTC Monetization Program</dd></div>
+<div><dt>Stated</dt><dd>To strengthen the preferreds, "enhance liquidity" and "preserve long-term Bitcoin exposure." STRC is the buyback priority "if management determines that repurchases are accretive and would strengthen the Company's capital structure"</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">Jul 2026</span><span class="nm">Redefine mNAV as "net"</span>
+<p class="one">Problem: the old enterprise-value measure no longer described a balance sheet now full of preferreds.</p>
+<dl>
+<div><dt>Stated (via press)</dt><dd>"As Digital Credit becomes a larger portion of our balance sheet, we've sharpened our precision"</dd></div>
+<div><dt>Critics</dt><dd>The change came weeks after the old measure fell below 1.0x</dd></div>
+<div><dt>Analysis</dt><dd>Both can be true. Use whichever version you like, but always label it (<a class="xref" href="#ch8">Chapter 14</a>)</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">Jul–Oct 2026</span><span class="nm">Sell common to retire STRC</span>
+<p class="one">Problem: STRC below $100 and MSTR above its net assets.</p>
+<dl>
+<div><dt>What it did</dt><dd>About 17.0m STRC shares retired for $1.65B by Oct 11, funded by MSTR sales</dd></div>
+<div><dt>Analysis</dt><dd>Adds net bitcoin per share while net mNAV &gt; STRC price ÷ $100 (dat-accretion, <a class="xref" href="#ch12">Chapter 23</a>), and shrinks the dividend bill</dd></div>
+<div><dt>Cost</dt><dd>Bitcoin buying slowed; MSTR holders were diluted to retire a claim</dd></div>
+</dl></article>
+
+<article class="card"><span class="tk">Oct 2026</span><span class="nm">Pay dividends every day</span>
+<p class="one">Problem: income buyers compare preferreds with money-market funds that accrue daily.</p>
+<dl>
+<div><dt>Stated (proxy)</dt><dd>Five reasons: less waiting to reinvest; better liquidity and trading; price stability (for STRC, keeping it near $100); easier access to preferred capital, which benefits common holders; and room for possible continuous trading in future</dd></div>
+<div><dt>Status</dt><dd>Shareholder vote Oct 28; STRC first (Nov 2), STRF/STRK/STRD from Jan 4, 2027. Rates and totals unchanged</dd></div>
+</dl></article>
+</div>
+<div class="key"><b>The thread through all fourteen</b>Each era fixed the last one's weak point. Cash earned nothing, so it became bitcoin. Bitcoin needed scale, so came debt. Secured debt nearly bit, so everything after was unsecured. Equity was cheapest at a premium, so they sold stock. Income buyers were untapped, so came preferreds. Preferred prices drifted, so STRC floats. Dividends needed a credible source, so came the Reserve. The premium shrank, so came buybacks, rules and a new way to measure it.</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>What did the 2022 Silvergate episode teach, and where do you see it today?</summary><p>That bitcoin pledged as collateral can force a sale at the worst moment. Every security since is unsecured, and the preferreds have no claim on the coins.</p></details>
+<details><summary>Why sell preferreds when 0% convertibles were available?</summary><p>Convertibles mature or can be put back, and they depend on a buyer pool of arbitrage funds. Preferreds reach income investors and never mature. Strategy's stated reason was building the "fixed income" side of its plan; the refinancing point is analysis.</p></details>
+</div>
+</section>
+
 <section class="chapter" id="ch3">
-<span class="ch-num">Chapter 3</span>
+<span class="ch-num">Chapter 6</span>
 <h2>The engine: how selling stock can add bitcoin per share</h2>
 <div class="prose">
 <p>Here is the puzzle. Every time Strategy sells new shares, existing holders own a smaller slice of the company. So how can selling shares be good for them?</p>
@@ -535,7 +865,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <tr><td><b>1.0x</b></td><td class="r">$100</td><td class="r">$1,000</td><td class="r">10</td><td class="r">110</td><td class="r">110</td><td class="r">1.000</td><td class="r">0.0%</td></tr>
 <tr><td><b>0.8x</b></td><td class="r">$80</td><td class="r">$800</td><td class="r">8</td><td class="r">108</td><td class="r">110</td><td class="r">0.982</td><td class="r"><b>−1.8%</b></td></tr>
 </tbody></table></div>
-<figcaption>In this no-debt illustration, issuing shares to acquire bitcoin adds bitcoin per share above 1.0x and reduces it below 1.0x. Strategy’s real balance sheet requires the net definition in Chapter 8. Management describes discretion near 1x; the model’s hard gate is an assumption.</figcaption>
+<figcaption>In this no-debt illustration, issuing shares to acquire bitcoin adds bitcoin per share above 1.0x and reduces it below 1.0x. Strategy’s real balance sheet requires the net definition in <a class="xref" href="#ch8">Chapter 14</a>. Management describes discretion near 1x; the model’s hard gate is an assumption.</figcaption>
 </figure>
 
 <h3>The flywheel, and how it can reverse</h3>
@@ -570,7 +900,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 </figure>
 
 <h3>The rules in one table</h3>
-<div class="prose"><p>My dat-accretion project (Chapter 12) writes each action's day-one effect on net bitcoin per share. m is the net mNAV; q is a preferred's price divided by its $100 face value.</p></div>
+<div class="prose"><p>My dat-accretion project (<a class="xref" href="#ch12">Chapter 23</a>) writes each action's day-one effect on net bitcoin per share. m is the net mNAV; q is a preferred's price divided by its $100 face value.</p></div>
 <figure class="figure">
 <div class="tbl"><table>
 <thead><tr><th>Action</th><th>Adds bitcoin per share when</th><th>Why</th></tr></thead>
@@ -590,8 +920,85 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 </div>
 <p class="meta">Core source: <a href="https://www.strategy.com/press/strategy-announces-digital-credit-capital-framework_06-29-2026">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
+<section class="chapter" id="e1">
+<span class="ch-num">Chapter 7</span>
+<h2>The economics of the machine</h2>
+<div class="prose">
+<p class="lede-big">Strategy takes one asset, bitcoin, and sells different slices of it to different investors, each at the price that investor will pay. It makes money when the slices sell for more, in total, than the bitcoin behind them costs.</p>
+</div>
+
+<h3>One asset, five kinds of buyer</h3>
+<div class="prose"><p>Different investors want different things from bitcoin. Some want more risk, some less, some want a regular income. Strategy designs a security for each, and each buyer pays for the feature they want.</p></div>
+<figure class="figure">
+<h4>Who buys what, and what Strategy gives up</h4>
+<div class="tbl"><table>
+<thead><tr><th>Buyer</th><th>Wants</th><th>Buys</th><th>What Strategy is really selling</th><th>What it costs Strategy</th></tr></thead>
+<tbody>
+<tr><td><b>Growth investors</b></td><td>More than 1x bitcoin upside</td><td>MSTR</td><td>Leveraged bitcoin exposure, plus growth in bitcoin per share</td><td>A slice of all future value (cheap when mNAV is high)</td></tr>
+<tr><td><b>Convertible-arbitrage funds</b></td><td>Volatility to trade</td><td>Convertible notes</td><td>An option on a very volatile stock</td><td>~0% coupon; dilution if converted; cash if put</td></tr>
+<tr class="hl"><td><b>Income investors</b></td><td>Steady cash yield</td><td>STRC, STRF, STRD</td><td>Credit with bitcoin as the cushion behind it</td><td>8–12% a year, forever</td></tr>
+<tr><td><b>Hybrid investors</b></td><td>Income plus some upside</td><td>STRK</td><td>Income plus a conversion option</td><td>8% a year (or shares) and dilution if converted</td></tr>
+<tr><td><b>European investors</b></td><td>Income in euros</td><td>STRE</td><td>The same credit, in their currency</td><td>10% a year in euros; currency risk</td></tr>
+</tbody></table></div>
+<figcaption>Arbitrage funds typically buy the convertible and sell MSTR short to hedge, profiting from volatility rather than direction. That hedging is part of why converts were cheap for Strategy to issue.</figcaption>
+</figure>
+
+<h3>What the money costs</h3>
+<figure class="figure">
+<h4>Strategy's cost of capital, October 2026</h4>
+<p class="fl">Annual cash cost divided by the face value of each layer. This book's arithmetic from the filings (<a class="xref" href="#ch11">Chapter 22</a>).</p>
+<div class="hbar"><span>Convertible debt</span><div><div class="b" style="width:4.5%"></div></div><span class="a">0.5%</span></div>
+<div class="hbar"><span>All senior claims</span><div><div class="b ink" style="width:63.4%"></div></div><span class="a">7.6%</span></div>
+<div class="hbar"><span>Preferreds</span><div><div class="b hot" style="width:92.3%"></div></div><span class="a">11.1%</span></div>
+<div class="hbar"><span>STRC alone</span><div><div class="b" style="width:100%"></div></div><span class="a">12.0%</span></div>
+<figcaption>One scale from 0% to 12%. The converts are almost free in cash terms, which is exactly why they carry the put risk. The preferreds cost far more but never mature.</figcaption>
+</figure>
+
+<h3>The hurdle bitcoin has to clear</h3>
+<div class="prose">
+<p>Here is the cleanest way to see whether the machine works. Total fixed charges are about <b>$1.56B a year</b>. The bitcoin is worth about <b>$69.7B</b>. So bitcoin has to rise about <b>2.2% a year</b>, measured against the whole stack, just to "earn" the carry. Above that, common holders are ahead. Below it, the carry eats into their value.</p>
+<p>For a single new security, the hurdle is its own rate. Raising $1B of STRC at 12% buys about 12,176 BTC at $82,131. The dividend costs $120M a year, about 1,461 BTC at today's price. That trade pays off for common holders only if bitcoin rises faster than about 12% a year over the life of the money. Strategy's bet is that bitcoin's long-run growth will beat its cost of credit by a wide margin. That's a forecast, not a fact, and it's the single assumption the whole model rests on.</p>
+</div>
+<figure class="figure">
+<span class="tag">Illustration: one year, using today's figures</span>
+<h4>$1B of STRC used to buy bitcoin: what common holders gain or lose</h4>
+<div class="tbl"><table>
+<thead><tr><th>Bitcoin over the year</th><th class="r">Value of 12,176 BTC</th><th class="r">Less $120M dividend</th><th class="r">Gain to common vs not raising</th></tr></thead>
+<tbody>
+<tr><td>+30%</td><td class="r">$1,300M</td><td class="r">$1,180M</td><td class="r"><b>+$180M</b></td></tr>
+<tr><td>+12% (STRC's rate)</td><td class="r">$1,120M</td><td class="r">$1,000M</td><td class="r">$0</td></tr>
+<tr><td>0%</td><td class="r">$1,000M</td><td class="r">$880M</td><td class="r"><b>−$120M</b></td></tr>
+<tr><td>−30%</td><td class="r">$700M</td><td class="r">$580M</td><td class="r"><b>−$420M</b></td></tr>
+</tbody></table></div>
+<figcaption>Gain = value of the extra bitcoin − $1B claim − $120M dividend. Ignores fees, taxes and any effect on mNAV. The $1B claim stays the same size whatever bitcoin does.</figcaption>
+</figure>
+
+<h3>Leverage, measured</h3>
+<div class="prose">
+<p>Net assets are bitcoin ($69.7B) plus cash ($5.5B) minus claims ($20.5B), about $54.7B. A 10% move in bitcoin is $7.0B, which is a <b>12.7% move in net assets</b>. So at net asset value, common holders own about <b>1.27x</b> bitcoin. The market premium adds more swing on top. When MSTR trades above its net assets, its price can move further than that 1.27x.</p>
+</div>
+
+<h3>The issuance rulebook</h3>
+<div class="prose"><p>Put the costs together and Strategy's choice of what to sell follows from two prices: the mNAV of the common and the price of the preferreds relative to $100.</p></div>
+<figure class="figure">
+<h4>Which security to sell (or buy back)</h4>
+<div class="tbl"><table>
+<thead><tr><th></th><th>Preferreds at or above $100</th><th>Preferreds below $100</th></tr></thead>
+<tbody>
+<tr><td><b>Net mNAV above 1.0x</b></td><td>Sell either. Common adds bitcoin per share directly; preferreds add leverage</td><td class="hl"><b>Sell common, buy back preferreds.</b> The 2026 rotation</td></tr>
+<tr><td><b>Net mNAV below 1.0x</b></td><td>Sell preferreds; consider buying back common</td><td>Sell neither. Use the Reserve; buy back whichever is cheapest; bitcoin sales as a last resort</td></tr>
+</tbody></table></div>
+<figcaption>Day-one effects from the rules in <a class="xref" href="#ch3">Chapter 6</a>. Management keeps discretion; this is the logic, not a published policy.</figcaption>
+</figure>
+<div class="key"><b>The economics in one sentence</b>Strategy borrows at 0–12% against an asset it believes will grow faster than that, and it sells shares when the market pays more than the assets behind them. Both halves need confidence. One needs bitcoin to rise; the other needs a premium.</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>Why is the 2.2% hurdle so much lower than STRC's 12%?</summary><p>The 2.2% spreads all charges across all the bitcoin, most of which was bought with common stock that costs no cash. The 12% applies only to the bitcoin bought with STRC money.</p></details>
+<details><summary>Bitcoin is flat for a year. Where does STRC's dividend come from?</summary><p>From the USD Reserve or from selling MSTR (if mNAV is above 1.0x). Either way, common holders bear the cost.</p></details>
+</div>
+</section>
+
 <section class="chapter" id="ch4">
-<span class="ch-num">Chapter 4</span>
+<span class="ch-num">Chapter 8</span>
 <h2>The capital stack: who gets paid first</h2>
 <div class="prose">
 <p>A <b>capital stack</b> lists everyone with a claim on a company, from first-paid to last-paid. If money runs short, the top gets paid in full before anyone below gets anything. Strategy's stack has seven layers: debt, five preferreds, and common stock at the bottom, which gets whatever is left.</p>
@@ -624,14 +1031,14 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <p>Two things fall out of this picture:</p>
 <ul>
 <li><b>Bitcoin would have to fall about 70%</b>, to roughly $24,000, before it was worth only as much as the claims ahead of common. Below that, the common stock is worth nothing on paper.</li>
-<li><b>The market values the common at $63.8B</b>, which is more than the $49.2B of bitcoin left after the claims (69.7 − 20.5), or $54.7B counting its $5.5B of cash. That gap is the premium from Chapter 3.</li>
+<li><b>The market values the common at $63.8B</b>, which is more than the $49.2B of bitcoin left after the claims (69.7 − 20.5), or $54.7B counting its $5.5B of cash. That gap is the premium from <a class="xref" href="#ch3">Chapter 6</a>.</li>
 </ul>
 </div>
 <div class="key"><b>Why seniority matters for the preferreds</b>STRF sits right under the debt and has a penalty rate if Strategy skips it, so it is the safest preferred. STRD is the most junior, and its dividends can be skipped forever without ever being owed. That's why it pays 10% while STRK, which is more senior and also converts into MSTR, pays 8%.</div>
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
 <section class="chapter" id="ch5">
-<span class="ch-num">Chapter 5</span>
+<span class="ch-num">Chapter 9</span>
 <h2>Every product, one card each</h2>
 <div class="prose">
 <p>Why sell five different preferreds instead of one? Because each one is built for a different buyer. Some want safety, some want the highest yield, some want a bond-like price that barely moves, some want euros, and some want a piece of the upside. Strategy's pitch is that it can sell <b>"digital credit"</b> to all of them, each on different terms, all backed by the same bitcoin.</p>
@@ -691,7 +1098,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <div><dt>Pays</dt><dd>12% now, set monthly; paid twice a month (daily from Nov 1 if approved)</dd></div>
 <div><dt>Buyer</dt><dd>Wants high cash yield with a price that barely moves</dd></div>
 <div><dt>Size</dt><dd>≈ $8.8B, two-thirds of Strategy's annual charges</dd></div>
-<div><dt>Watch</dt><dd>Price vs $100. Below $100 the rate tends to rise; Strategy also buys it back. See Chapter 6</dd></div>
+<div><dt>Watch</dt><dd>Price vs $100. Below $100 the rate tends to rise; Strategy also buys it back. See <a class="xref" href="#ch6">Chapter 11</a></dd></div>
 </dl></article>
 
 <article class="card new">
@@ -731,7 +1138,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <div><dt>Reserve</dt><dd>$4.88B, only for dividends and interest; policy floor of 12 months of charges</dd></div>
 <div><dt>USD Cash</dt><dd>$0.64B, flexible</dd></div>
 <div><dt>Backstop</dt><dd>BTC Monetization Program: may sell bitcoin to add up to $1.25B to the Reserve</dd></div>
-<div><dt>See</dt><dd>Chapter 7</dd></div>
+<div><dt>See</dt><dd><a class="xref" href="#ch7">Chapter 12</a></dd></div>
 </dl></article>
 </div>
 <div class="check"><p>Check yourself</p>
@@ -740,8 +1147,54 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 </div>
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
+<section class="chapter" id="t1">
+<span class="ch-num">Chapter 10</span>
+<h2>Every term, and why it's there</h2>
+<div class="prose">
+<p class="lede-big">A preferred stock is a list of promises. Each promise makes the security more attractive to some buyer, and each one costs Strategy something. Reading the terms this way explains why the five preferreds look so different.</p>
+<p>The question to ask of every term is: <b>who does this help, and what does it cost the other side?</b></p>
+</div>
+<figure class="figure">
+<h4>The term sheet, decoded</h4>
+<div class="tbl"><table>
+<thead><tr><th>Term</th><th>What it does</th><th>Why it helps Strategy (analysis)</th><th>What it costs Strategy</th><th>Where</th></tr></thead>
+<tbody>
+<tr><td><b>$100 stated amount</b></td><td>The face value: dividends are a % of it; it's the claim in a wind-down</td><td>Easy yield math; a clear "par" to aim the price at</td><td>Selling below $100 means receiving less cash than the claim created</td><td>All (€100 for STRE)</td></tr>
+<tr class="hl"><td><b>Perpetual</b></td><td>No maturity; never has to be repaid</td><td>No refinancing wall in a bad market. Removes the biggest risk of debt</td><td>Higher rate than debt; dividends run forever unless bought back</td><td>All</td></tr>
+<tr><td><b>Cumulative</b></td><td>A skipped dividend is still owed before common gets anything</td><td>Reassures buyers, so a lower rate</td><td>Can't escape a missed payment</td><td>STRF, STRC, STRE, STRK</td></tr>
+<tr><td><b>Compounding + step-up</b></td><td>Unpaid dividends grow, and the rate steps up 1% a period to 18%</td><td>Makes skipping so expensive that buyers trust payment, for the safest tier</td><td>A severe penalty if cash ever runs short</td><td>STRF, STRE</td></tr>
+<tr><td><b>Non-cumulative</b></td><td>A skipped dividend is simply gone</td><td>A release valve: a dividend it could cut in a crisis without owing it</td><td>Buyers demand more: 10% while more senior STRK pays 8%</td><td>STRD</td></tr>
+<tr><td><b>Seniority rank</b></td><td>Fixes the order of payment</td><td>Lets Strategy sell different risk levels at different prices</td><td>Every new junior issue must pay more than those above it</td><td>STRF → STRD</td></tr>
+<tr class="hl"><td><b>Variable rate</b></td><td>Management resets the rate monthly</td><td>Keeps the price near $100, so it behaves like a cash product and can be sold continuously</td><td>The rate rises exactly when markets are nervous</td><td>STRC</td></tr>
+<tr><td><b>Frequent payments</b></td><td>Monthly, then twice-monthly, possibly daily</td><td>Suits income buyers; smooths the price around record dates</td><td>Operational cost; less time to hold cash between payments</td><td>STRC (others quarterly; daily proposed)</td></tr>
+<tr><td><b>Conversion option</b></td><td>Each share can become 0.1 MSTR</td><td>Upside lets it pay less (8%)</td><td>Dilution if MSTR rises above the conversion value</td><td>STRK</td></tr>
+<tr><td><b>Pay in shares</b></td><td>Dividends can be paid in MSTR stock</td><td>Saves cash in a squeeze (≈ $112M a year)</td><td>Dilution, worst when MSTR is cheap</td><td>STRK</td></tr>
+<tr><td><b>Euro denomination</b></td><td>Stated amount and dividends in euros</td><td>Opens a new pool of European buyers</td><td>Currency risk; no euro reserve</td><td>STRE</td></tr>
+<tr><td><b>Issuer call</b></td><td>Strategy can redeem the whole series in set cases: if under 25% remains, after a tax event, and for STRC at $101 at any time</td><td>A clean exit if a series becomes too small or too costly</td><td>Caps buyers' upside, so they price that in</td><td>All; STRC's $101 call is the broadest</td></tr>
+<tr><td><b>Fundamental-change put</b></td><td>Holders can sell back at the stated amount if the company is taken over or similar</td><td>Reassures buyers about a change of control</td><td>A cash call in a takeover</td><td>All four US series</td></tr>
+<tr><td><b>Unsecured</b></td><td>No direct claim on the bitcoin</td><td>Keeps the coins free of margin calls and liens</td><td>Buyers rely on the overall balance sheet, so they want more yield</td><td>All</td></tr>
+<tr><td><b>Listing</b></td><td>Trades on an exchange</td><td>Liquidity: buyers can sell any day, which makes "perpetual" acceptable</td><td>A daily public price that shows stress instantly</td><td>Nasdaq; STRE on Luxembourg Euro MTF</td></tr>
+</tbody></table></div>
+<figcaption>Terms from the Q2 2026 10-Q, the certificates of designation and 10-K Exhibit 4.2. Redemption rights and fundamental-change repurchase terms differ by series. Read each certificate before relying on them.</figcaption>
+</figure>
+
+<h3>Selling below $100 at launch</h3>
+<div class="prose">
+<p>Every one of them was first sold below its stated amount: STRK at $80, STRF and STRD at $85, STRC at $90 and STRE at €80. That raises the buyer's starting yield above the headline rate (€10 on €80 is 12.5%) without printing a higher rate on the security. It also means Strategy took in less cash than the claim it created. For STRE, €620M raised for a €775M claim. That gap is a real cost, paid up front.</p>
+</div>
+
+<h3>Why a ladder instead of one big preferred</h3>
+<div class="prose">
+<p>One security would have to be priced for the average buyer. A ladder lets Strategy charge each buyer only what their slice is worth. Cautious money buys STRF at the top and accepts less. Yield-hungry money buys STRD at the bottom and gets more. Strategy collects the difference. The cost is complexity, and a fixed order that can't easily be changed later.</p>
+</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>Why would a company ever choose to make its own preferred non-cumulative?</summary><p>To keep a dividend it can stop without owing it later. Buyers know this and demand a higher rate, so Strategy pays for that flexibility every year.</p></details>
+<details><summary>What does the STRF step-up protect against, and who pays for it?</summary><p>It protects STRF holders against skipped dividends by making skipping very costly. If Strategy ever did skip, common holders would bear the penalty.</p></details>
+</div>
+</section>
+
 <section class="chapter" id="ch6">
-<span class="ch-num">Chapter 6</span>
+<span class="ch-num">Chapter 11</span>
 <h2>STRC up close: a dividend that steers a price</h2>
 <div class="prose">
 <p>STRC is the most important product to understand, for two reasons. It's the largest preferred, about two-thirds of Strategy's annual cash charges. Management can adjust its dividend rate monthly to encourage trading near $100. It remains perpetual preferred equity with market and payment risk. Rate changes require a board decision.</p>
@@ -785,7 +1238,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <div class="node" style="background:var(--color-surface);color:var(--color-ink);border-color:var(--color-border)"><b>Twice-monthly, then daily</b><small style="color:var(--color-secondary)">Moved from monthly to twice a month in June. If shareholders approve on Oct 28, STRC pays every calendar day from Nov 1 ($1.00 a share for November, $0.03–$0.04 a day).</small></div>
 <div class="node" style="background:var(--color-surface);color:var(--color-ink);border-color:var(--color-border)"><b>Rate on hold at 12%</b><small style="color:var(--color-secondary)">Management says it won't recommend changes until STRC shows "sustained, healthy trading near $100."</small></div>
 </div>
-<div class="warn"><b>The risk to understand</b>A variable rate can increase funding costs during stress. The board retains discretion; the price bands do not mechanically reset the coupon. Bitcoin weakness, preferred prices and rate decisions can interact without moving in lockstep. My coverage model (Chapter 11) lets you push STRC to 15% and see what happens to the Reserve.</div>
+<div class="warn"><b>The risk to understand</b>A variable rate can increase funding costs during stress. The board retains discretion; the price bands do not mechanically reset the coupon. Bitcoin weakness, preferred prices and rate decisions can interact without moving in lockstep. My coverage model (<a class="xref" href="#ch11">Chapter 22</a>) lets you push STRC to 15% and see what happens to the Reserve.</div>
 <div class="check"><p>Check yourself</p>
 <details><summary>Why would daily dividends help STRC's price?</summary><p>More frequent record and payment dates reduce the amount accruing between payments. Strategy argues that this may reduce price swings around dividend dates. It does not eliminate reasons to sell or guarantee price stability.</p></details>
 <details><summary>STRC is at $99 and MSTR's net mNAV is 1.2x. Does buying back STRC add bitcoin per share?</summary><p>Yes. The rotation adds while m &gt; q: 1.2 &gt; 0.99. It would stop adding only if STRC traded above $120.</p></details>
@@ -793,7 +1246,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <p class="meta">Core source: <a href="https://www.strategy.com/press/strategy-announces-digital-credit-capital-framework_06-29-2026">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
 <section class="chapter" id="ch7">
-<span class="ch-num">Chapter 7</span>
+<span class="ch-num">Chapter 12</span>
 <h2>Cash plumbing: where the dividend dollars come from</h2>
 <div class="prose">
 <p>Bitcoin pays nothing, so every dividend dollar has to come from somewhere else. Strategy has built four pipes for this, plus two programs that send money back out.</p>
@@ -839,8 +1292,13 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <div class="key"><b>Why a 12-month floor matters</b>It turns "we have cash" into a rule investors can check every week. It also means the Reserve can't all be spent: only the part above 12 months of charges (≈ $3.3B today) is truly free before the board has to step in.</div>
 <p class="meta">Core source: <a href="https://www.strategy.com/press/strategy-announces-digital-credit-capital-framework_06-29-2026">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
+<section class="chapter" id="ch15"><span class="ch-num">Chapter 13</span><h2>Trading prices, tax and accounting</h2><div class="prose">
+<h3>A dividend rate is different from a market yield</h3><p>The rate applies to the stated amount. Current yield divides the annual dividend by the traded price. For a fixed 10% rate on $100 stated amount, the annual dividend is $10. At an illustrative $80 price, current yield is 12.5%; at $110, it is 9.09%. These are illustrations, not quotes.</p><p>A higher current yield can reflect credit concerns, liquidity, interest rates or structural differences. It does not measure expected total return. A perpetual preferred has no scheduled maturity at which the investor is assured $100. STRK’s conversion feature, STRC’s variable rate, STRE’s euro payments and the seniority ladder all affect comparisons.</p><p>Use the same quote time and currency for all five products. The workbook preserves source dates; it does not claim a refreshed executable quote. Dividend yield is not a yield to maturity or a guarantee of payment.</p>
+<h3>Return of capital still consumes cash</h3><p>Strategy reported that its 2025 preferred distributions were return of capital for U.S. federal tax purposes to the extent of each holder’s basis. That reduces basis; distributions above basis are capital gains. The company’s expectation for future treatment depends on tax earnings and profits and can change. Tax classification does not reduce the issuer’s cash dividend obligation.</p><p><a href="https://www.strategy.com/press/strategy-announces-fourth-quarter-2025-financial-results_02-05-2026">February results and tax explanation</a>; <a href="https://www.strategy.com/investor-relations/dividend-return-of-capital">Forms 8937 and issuer tax records</a>. These describe issuer reporting, not a personalized tax conclusion.</p>
+<h3>Fair-value profit does not pay a dividend</h3><p>Strategy adopted ASU 2023-08 in 2025. Changes in bitcoin fair value enter reported net income. An unrealized gain raises accounting earnings without producing cash. A fair-value loss can be recorded while the company still holds a cash reserve. The coverage model therefore separates cash charges, available liquidity and bitcoin value.</p><p><a href="https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm#">Q2 filing, digital-assets accounting policy</a>. A bitcoin sale can create cash, with taxes and execution costs that the snapshot calculator does not estimate.</p>
+<h3>The software business remains an operating business</h3><p>Q2 2026 revenue was $122.4M and gross profit was $81.6M. For scale only, four times that quarter’s revenue is $489.6M, about 31% of the model’s $1,559.7M annual cash charges. Revenue is before operating expenses, taxes, reinvestment and working capital, so this comparison is not operating cash coverage. The model assumes no software cash contribution until a source-backed cash forecast is added.</p><p><a href="https://www.strategy.com/press/strategy-announces-second-quarter-2026-financial-results_07-30-2026">Q2 2026 results</a>.</p></div><div class="check"><p>Check yourself</p><details><summary>Can return-of-capital treatment make a dividend free for Strategy?</summary><p>No. It concerns the holder’s tax reporting. The issuer still pays the cash.</p></details></div></section>
 <section class="chapter" id="ch8">
-<span class="ch-num">Chapter 8</span>
+<span class="ch-num">Chapter 14</span>
 <h2>Keeping score: Strategy's numbers</h2>
 <div class="prose">
 <p>Strategy doesn't judge itself on earnings. It reports its own set of bitcoin measures, and it has changed some of them as the balance sheet changed. Know the definitions cold. The biggest trap is that "mNAV" has three different meanings.</p>
@@ -878,8 +1336,103 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 </div>
 <p class="meta">Core source: <a href="https://www.strategy.com/notes">issuer definitions</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
+<section class="chapter" id="v1">
+<span class="ch-num">Chapter 15</span>
+<h2>Valuing the common</h2>
+<div class="prose">
+<p class="lede-big">MSTR is worth its net bitcoin plus whatever the market will pay for Strategy's ability to grow it. The first part is arithmetic. The second part is the whole debate.</p>
+</div>
+
+<h3>Step 1: net asset value per share</h3>
+<figure class="figure">
+<h4>From bitcoin to a per-share number, October 2026</h4>
+<div class="tbl"><table>
+<thead><tr><th>Line</th><th class="r">$B</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>Bitcoin (848,250 × $82,131)</td><td class="r">69.7</td><td>Oct 15 close</td></tr>
+<tr><td>+ Cash (USD Reserve + USD Cash)</td><td class="r">5.5</td><td>Weekly 8-K, Oct 11</td></tr>
+<tr><td>− Debt</td><td class="r">(6.8)</td><td>Convertibles + other</td></tr>
+<tr><td>− Preferred notional</td><td class="r">(13.8)</td><td>All five, STRE at spot EUR/USD</td></tr>
+<tr class="hl"><td><b>Net assets</b></td><td class="r"><b>54.7</b></td><td></td></tr>
+<tr><td>÷ Shares (Class A + B, estimate)</td><td class="r">0.422B</td><td>Rolled forward from the 10-Q</td></tr>
+<tr class="hl"><td><b>Net assets per share</b></td><td class="r"><b>≈ $130</b></td><td>vs a share price of $151.29</td></tr>
+</tbody></table></div>
+<figcaption>Price ÷ net assets per share ≈ 1.17x. Strategy's own net mNAV uses fully diluted shares and treats in-the-money converts as shares; the coverage model's reconstruction gives 1.175x (<a class="xref" href="#ch8">Chapter 14</a>). This simple version ignores the software business and taxes.</figcaption>
+</figure>
+
+<h3>Step 2: why would anyone pay a premium?</h3>
+<div class="prose"><p>Paying $151 for $130 of net assets needs a reason. These are the arguments, with the honest objection to each.</p></div>
+<figure class="figure">
+<div class="tbl"><table>
+<thead><tr><th>Argument for the premium</th><th>The objection</th></tr></thead>
+<tbody>
+<tr><td><b>Growth in bitcoin per share.</b> Strategy can sell stock above net assets and buy more bitcoin, so each share's bitcoin grows. A growth company deserves a multiple</td><td>Circular: the premium is what makes the growth possible. If the premium goes, so does the growth</td></tr>
+<tr><td><b>Cheap leverage.</b> Perpetual preferreds and 0% converts give common holders leverage that can't be margin-called</td><td>The preferreds cost 8–12% a year. Leverage is only good if bitcoin outruns that</td></tr>
+<tr><td><b>Access.</b> Some funds can buy a Nasdaq stock but not bitcoin or ETFs, and MSTR has deep options markets</td><td>Spot ETFs (since Jan 2024) have narrowed this edge for most buyers</td></tr>
+<tr><td><b>Optionality.</b> Volatile stocks with active options markets attract traders</td><td>Volatility cuts both ways and can vanish in a long bear market</td></tr>
+<tr><td><b>Management and brand.</b> Saylor's following and Strategy's head start in "bitcoin credit"</td><td>Key-person risk; a brand is not an asset you can sell</td></tr>
+</tbody></table></div>
+</figure>
+
+<h3>Step 3: reflexivity</h3>
+<div class="prose">
+<p>The premium is <b>reflexive</b>: it affects the very thing it's valuing. A high premium lets Strategy add bitcoin per share. That growth supports the premium, and the loop can run either way (<a class="xref" href="#ch3">Chapter 6</a>). This is why mNAV swings so much. Basic mNAV was around 3.4x in November 2024 (a secondary estimate). The enterprise-value version fell below 1.0x in late June 2026, and the net version sat at about 1.19x in October.</p>
+</div>
+<div class="key"><b>A simple way to value it</b>Value = net assets × a multiple you believe is sustainable. A bull might argue for 1.5–2x on the basis of future accretion. A bear might argue for 1.0x or less, since an ETF gives the same bitcoin with no claims ahead of it. The model in <a class="xref" href="#ch11">Chapter 22</a> shows why the gap matters: above 1.0x Strategy can fund itself with stock; below it, it can't.</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>Bitcoin rises 10% and mNAV stays the same. Roughly how much does MSTR rise?</summary><p>About 12.7%. Net assets move about 1.27x bitcoin because the claims are fixed, and the same mNAV multiple carries that through to the price.</p></details>
+<details><summary>Why might a bear value MSTR below its net assets?</summary><p>Holders face a decades-long stream of preferred dividends, management discretion and possible dilution. An ETF has none of those, so a discount can be rational.</p></details>
+</div>
+</section>
+
+<section class="chapter" id="k1">
+<span class="ch-num">Chapter 16</span>
+<h2>The credit view</h2>
+<div class="prose">
+<p class="lede-big">A credit analyst asks two questions about any security that promises payments. Will the payments keep coming? And if they stop, how much of my money comes back?</p>
+<p>The first is <b>coverage</b>: how long the cash lasts (<a class="xref" href="#ch11">Chapter 22</a> answers it in detail). The second is <b>cushion</b>: how much asset value sits below your claim. For Strategy's preferreds, the cushion is bitcoin.</p>
+</div>
+
+<h3>How far bitcoin can fall before each layer is underwater</h3>
+<figure class="figure">
+<h4>Cumulative claims as a share of the bitcoin, by seniority</h4>
+<p class="fl">Each layer is only covered after everything above it. "Loan-to-value" (LTV) is cumulative claims ÷ bitcoin value. The drawdown column is how far bitcoin could fall before that layer's claims equal the bitcoin.</p>
+<div class="tbl"><table>
+<thead><tr><th>Down to and including</th><th class="r">Cumulative claims ($B)</th><th class="r">LTV</th><th class="r">Bitcoin fall to reach 1.0x</th><th class="r">BTC price at 1.0x</th></tr></thead>
+<tbody>
+<tr><td>Debt</td><td class="r">6.8</td><td class="r">9.7%</td><td class="r">−90%</td><td class="r">≈ $8,000</td></tr>
+<tr><td>STRF</td><td class="r">8.0</td><td class="r">11.5%</td><td class="r">−88%</td><td class="r">≈ $9,500</td></tr>
+<tr class="hl"><td>STRC</td><td class="r">16.8</td><td class="r">24.2%</td><td class="r">−76%</td><td class="r">≈ $19,800</td></tr>
+<tr><td>STRE</td><td class="r">17.7</td><td class="r">25.4%</td><td class="r">−75%</td><td class="r">≈ $20,900</td></tr>
+<tr><td>STRK</td><td class="r">19.1</td><td class="r">27.4%</td><td class="r">−73%</td><td class="r">≈ $22,500</td></tr>
+<tr><td>STRD</td><td class="r">20.5</td><td class="r">29.4%</td><td class="r">−71%</td><td class="r">≈ $24,200</td></tr>
+</tbody></table></div>
+<figcaption>Bitcoin $69.7B at $82,131. Ignores the $5.5B of cash (which may be spent paying dividends) and the software business. Preferred holders have no direct claim on the coins. This is a measure of balance-sheet headroom, not collateral.</figcaption>
+</figure>
+
+<h3>How that compares</h3>
+<div class="prose">
+<p>A lender making a bitcoin-backed loan usually lends well under the coins' value and demands more collateral if the price falls. Strategy's most junior preferred sits at about 29% "LTV", which looks conservative by that standard. But the comparison flatters it in three ways:</p>
+<ul>
+<li><b>No margin call means no early warning.</b> A lender can sell collateral early. Preferred holders just watch.</li>
+<li><b>One asset.</b> The cushion is a single, volatile asset. Bitcoin has fallen more than 70% from its peak before.</li>
+<li><b>Perpetual exposure.</b> A one-year loan only has to survive one year. A perpetual preferred has to survive every year.</li>
+</ul>
+<p>That's why S&amp;P rated Strategy <b>B-</b> in October 2025, deep in high-yield territory. It cited bitcoin concentration, a narrow business, weak risk-adjusted capital and thin dollar liquidity. S&amp;P rates the issuer. The preferreds, ranking below its debt, would be judged riskier still.</p>
+</div>
+
+<h3>What the market says</h3>
+<div class="prose">
+<p>The preferreds' trading prices are the market's running credit opinion. A preferred far below $100 is the market demanding a higher yield. STRC climbing back to about $99.65 by October 2026, from the high $80s in mid-2026, is the market saying the credit risk eased, helped by the 12% rate, buybacks and the larger Reserve (<a class="xref" href="#ch6">Chapter 11</a>).</p>
+</div>
+<div class="key"><b>The credit analyst's summary</b>Strong cushion, strong near-term liquidity (37 months of Reserve), no maturities on the preferreds. Weaknesses: a single volatile asset, funding that depends on market confidence, and a junior position behind $6.8B of debt that holders can put in 2027–28. In short: well-cushioned, but with confidence-driven funding.</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>Why is STRD's cushion thinner than STRF's when both are backed by the same bitcoin?</summary><p>STRD ranks last, so every claim above it (debt, STRF, STRC, STRE, STRK) is paid from the bitcoin first. Its claims-to-bitcoin ratio is 29% against STRF's 12%.</p></details>
+</div>
+</section>
+
 <section class="chapter" id="ch9">
-<span class="ch-num">Chapter 9</span>
+<span class="ch-num">Chapter 17</span>
 <h2>What can break</h2>
 <div class="prose">
 <p>Most risks start in the same place: the bitcoin price. A big fall hits Strategy through several channels at once, and they reinforce each other.</p>
@@ -895,7 +1448,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <tr><td><b>3. Cushion thins</b></td><td>BTC cover falls toward 1.0x. Preferreds trade like distressed credit</td><td>BTC cover; preferred yields</td><td>None directly: needs bitcoin to recover or claims to shrink</td></tr>
 <tr><td><b>4. Convert puts</b></td><td>If MSTR is below conversion prices, holders can demand $5.9B back between Sep 2027 and Sep 2028</td><td>MSTR vs each note's conversion price</td><td>Refinance, sell stock, or sell bitcoin</td></tr>
 </tbody></table></div>
-<figcaption>Channels 1, 2 and 3 are in the coverage model (Chapter 11). Channel 4 is tracked there as principal falling due, not as a Reserve use.</figcaption>
+<figcaption>Channels 1, 2 and 3 are in the coverage model (<a class="xref" href="#ch11">Chapter 22</a>). Channel 4 is tracked there as principal falling due, not as a Reserve use.</figcaption>
 </figure>
 <h3>Outside pressures</h3>
 <div class="two">
@@ -907,8 +1460,96 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <div class="key"><b>The fair way to say it</b>Strategy's design pushes risk toward common holders and away from the preferreds: years of cash in the Reserve, a long list of levers, and no principal due on the preferreds. The weak points are mNAV and STRC's price. Both depend on investor confidence, which can change faster than any cash buffer.</div>
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
+<section class="chapter" id="s1">
+<span class="ch-num">Chapter 18</span>
+<h2>Three futures, quarter by quarter</h2>
+<div class="prose">
+<p class="lede-big">Numbers stick better as stories. Here are three five-year paths for Strategy, each told the way a treasurer would live through it. The figures come from the coverage model's 20-quarter path (<a class="xref" href="#ch11">Chapter 22</a>).</p>
+<p>These are model runs on stated assumptions, not forecasts. Every path pays the full $6.7B of convertible puts in cash when they fall due, which is the harshest assumption.</p>
+</div>
+
+<figure class="figure">
+<h4>Five years, three outcomes</h4>
+<p class="fl">Model results, 20 quarters from Oct 16, 2026. "Funding gap" means cash the model can't find from the Reserve or stock sales. Strategy would have to sell bitcoin, issue preferreds, refinance or skip payments to close it.</p>
+<div class="tbl"><table>
+<thead><tr><th>Path</th><th>What it assumes</th><th class="r">Stock sold over 5 yrs</th><th class="r">Cash at the end</th><th class="r">Funding gap</th></tr></thead>
+<tbody>
+<tr class="hl"><td><b>Base</b></td><td>Today's prices; stock sells at the modelled share of daily volume</td><td class="r">$11.1B</td><td class="r">$1.5B</td><td class="r">None</td></tr>
+<tr><td><b>No stock sales</b></td><td>Today's prices, but Strategy sells no common at all</td><td class="r">$0</td><td class="r">$0</td><td class="r">$9.5B</td></tr>
+<tr><td><b>Severe</b></td><td>BTC −70%, mNAV 0.8x, STRC at 15%, euro +10%</td><td class="r">$0</td><td class="r">$0</td><td class="r">$10.8B</td></tr>
+</tbody></table></div>
+<figcaption>Source: the repository's recorded LibreOffice recalculation cases, Oct 16, 2026. Demand coefficients and the 1.0x gate are editable model assumptions, not calibrated forecasts.</figcaption>
+</figure>
+
+<h3>Path 1: Base. The machine runs</h3>
+<div class="prose">
+<p><b>Years 1–2.</b> MSTR trades above its net assets, so Strategy keeps selling a little stock every day. The proceeds pay most of the ~$390M quarterly dividends and interest, so the Reserve barely moves. STRC trades near $100, and the rate holds at 12%.</p>
+<p><b>Years 2–3.</b> The convertible puts arrive: about $1.0B in Sep 2027, then $2.0B, $1.5B and $1.4B through 2028. Each one is a large one-time cash need, paid from stock sales and the Reserve.</p>
+<p><b>Year 5.</b> About $11.1B of common has been sold in total, every put has been paid, and $1.5B of cash is left. The cost is dilution: common holders now share the company with many more shares, though each share still holds a similar amount of bitcoin as long as the stock sold above net assets.</p>
+</div>
+
+<h3>Path 2: The market shuts</h3>
+<div class="prose">
+<p>Prices are unchanged, but suppose nobody will buy MSTR, or the stock trades below its net assets so selling it would cut bitcoin per share. The Reserve pays the dividends for about three years. The puts arrive in the middle of that. By the end of the path, the model is <b>$9.5B short</b>. To close that gap, Strategy has four real options: sell bitcoin (allowed into the Reserve up to $1.25B, more with board approval), pay STRK in shares, sell preferreds if they trade at $100, or negotiate with convertible holders.</p>
+</div>
+
+<h3>Path 3: Severe</h3>
+<div class="prose">
+<p><b>Quarter 1.</b> Bitcoin falls 70% to about $24,600. Bitcoin's cover over the debt and preferreds drops to about 1.0x. MSTR trades below its net assets, so stock sales stop.</p>
+<p><b>Quarters 1–4.</b> STRC's price falls and its rate is pushed to 15%. Charges rise to about $1.83B a year. The Reserve now lasts about 32 months instead of 37.</p>
+<p><b>Years 2–3.</b> The Reserve runs down while puts fall due. In this scenario MSTR is far below the conversion prices, so holders will want cash. The gap reaches <b>$10.8B</b> over the path.</p>
+<p><b>The choice at the end.</b> Selling bitcoin at the bottom, the thing Strategy exists not to do, or leaning on the preferred terms: skipping STRD (non-cumulative), paying STRK in shares, and only then the senior layers, where STRF's and STRE's step-ups make skipping very expensive.</p>
+</div>
+<div class="key"><b>What the three paths teach</b>The near term is safe in all three: the Reserve covers about three years. The danger is the 2027–28 put window meeting a closed equity market. That's the date to watch, and it's why the coverage model tracks puts separately from dividends.</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>In the Base path, why doesn't the Reserve shrink much?</summary><p>Daily stock sales above net assets pay most of the dividends, so the Reserve is rarely drawn on.</p></details>
+<details><summary>What's the first lever Strategy would likely pull in Path 3, and why that one?</summary><p>Probably bitcoin sales into the Reserve or paying STRK in shares. Skipping STRD is legal but damages trust in every other preferred, and skipping STRF or STRE triggers expensive step-ups.</p></details>
+</div>
+</section>
+
+<section class="chapter" id="g1">
+<span class="ch-num">Chapter 19</span>
+<h2>Who decides</h2>
+<div class="prose">
+<p class="lede-big">Many of the most important numbers in this book are choices, not market outcomes: STRC's rate, whether to sell stock this week, whether to skip a dividend, whether to sell bitcoin. So it matters who makes them.</p>
+</div>
+<figure class="figure">
+<h4>Who controls which lever</h4>
+<div class="tbl"><table>
+<thead><tr><th>Decision</th><th>Who makes it</th><th>Constraint</th></tr></thead>
+<tbody>
+<tr><td>Declare each preferred dividend</td><td>Board of directors</td><td>Cumulative series still owe skipped payments; STRF and STRE step up</td></tr>
+<tr class="hl"><td>Set STRC's monthly rate</td><td>Board, on management's recommendation</td><td>Published framework of price bands; current policy holds 12% until STRC trades near $100</td></tr>
+<tr><td>Sell MSTR or preferreds through the ATMs</td><td>Management, within board-approved programs</td><td>Registered capacity; no STRC sold below $100 (stated policy); discretion near 1.0x net mNAV</td></tr>
+<tr><td>Spend the USD Reserve</td><td>Management</td><td>Only on dividends and interest; going below 12 months needs board approval</td></tr>
+<tr><td>Sell bitcoin</td><td>Management, under the BTC Monetization Program</td><td>Up to $1.25B into the Reserve, or when better than issuing stock; anything else needs the board</td></tr>
+<tr><td>Change a preferred's terms (e.g. daily dividends)</td><td>Shareholders, at a meeting</td><td>Majority of common voting power; Class B carries extra votes</td></tr>
+</tbody></table></div>
+<figcaption>From the Jun 29, 2026 framework 8-K and the Oct 2026 definitive proxy.</figcaption>
+</figure>
+<div class="prose">
+<h4>The people</h4>
+<p><b>Michael Saylor</b> co-founded MicroStrategy in 1989, led the move into bitcoin in 2020 and has been Executive Chairman since August 2022. He is also its public voice. <b>Phong Le</b> has been CEO since 2022, after serving as CFO when the strategy began.</p>
+<h4>Control</h4>
+<p>Saylor holds Class B shares that carry extra votes per share, giving him roughly a third of the total voting power (Oct 2026 proxy, as reported). That's not a majority, but it means a shareholder vote such as the Oct 28 daily-dividend amendment needs only modest support from other holders to pass.</p>
+<h4>Why this matters for the analysis</h4>
+<ul>
+<li><b>Discretion is a risk and a tool.</b> A board that can adjust STRC's rate, pay STRK in shares or pause stock sales can respond to stress. Investors can't predict exactly how it will.</li>
+<li><b>Key-person risk.</b> The strategy, the brand and much of the investor following are tied to one person.</li>
+<li><b>Aligned incentives.</b> Saylor is a large holder of the common stock, which absorbs losses first. That aligns him with common holders, which isn't the same as aligning him with preferred holders.</li>
+</ul>
+<h4>Outside referees</h4>
+<p>Three outside parties shape Strategy's room to move. The <b>SEC</b> requires filings, including the weekly 8-Ks this book relies on. <b>Rating agencies</b> such as S&amp;P (B-, Oct 2025) affect who may buy the securities. <b>Index providers</b> such as MSCI decide whether passive funds must hold MSTR, and froze its index share count growth in Jan 2026.</p>
+</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>Who decides STRC's rate, and what limits them?</summary><p>The board, on management's recommendation. They follow a published framework tied to STRC's trading price, and the current policy holds 12% until it trades near $100.</p></details>
+</div>
+</section>
+
+<section class="chapter" id="ch16"><span class="ch-num">Chapter 20</span><h2>Comparing treasury companies</h2><div class="prose"><p>Apply the same questions to each firm: what assets does it hold, what cash can those assets generate, what claims rank ahead of common, and what funding is available when issuance slows? Using Strategy’s net-coin definition across firms creates a comparison, not an endorsement of that definition.</p></div><figure class="figure"><h4>Different assets create different cash questions</h4><div class="tbl"><table><thead><tr><th>Company</th><th>Mechanism</th><th>What the coverage model must add</th></tr></thead><tbody><tr><td>Strategy</td><td>BTC reserve, common and preferred capital</td><td>Dividend resets, euro exposure, put dates, USD Reserve and issuance demand</td></tr><tr><td>BitMine</td><td>ETH treasury and staking; perpetual preferred funding</td><td>Staking receipts after costs, lock-up/withdrawal constraints, ETH-price exposure, preferred cash charges</td></tr><tr><td>Metaplanet</td><td>BTC treasury, preferred capital and an income-generation business</td><td>JPY/USD exposure, local financing terms, option income and its associated liabilities</td></tr></tbody></table></div><figcaption>Qualitative mechanisms, not a ranking. Sources: <a href="https://bitminetech.io/wp-content/uploads/2025/07/BitMine-Presentation-July-27th-2025.pdf">BitMine’s treasury presentation</a>; <a href="https://www.sec.gov/Archives/edgar/data/1829311/000087666126000522/BMNP061126.pdf">NYSE’s BMNP listing certification</a>; <a href="https://metaplanet.jp/media-resources/en/845ccc23-254f-4ec0-9964-f9c1f5f5e15d/fiscal-year-2025-earnings-presentation-1771553917494.pdf">Metaplanet FY2025 presentation</a>. Current security terms require dated filings before quantitative comparison.</figcaption></figure><div class="prose"><h3>How to make the comparison fair</h3><p>Match observation dates, currencies and dilution definitions. Deduct senior claims once. Do not apply a staking yield to the whole treasury if only some ETH is staked; do not treat option premiums as risk-free recurring earnings. Compare net cash after costs with cash charges, and show principal deadlines separately.</p><p>The dat-accretion project asks a different question: whether a capital rotation changes net coins per share at disclosed prices. A rotation can add net coins per share while cash coverage weakens. Both measures are needed to describe the tradeoff.</p></div></section>
+
 <section class="chapter" id="ch10">
-<span class="ch-num">Chapter 10 · Part IV</span>
+<span class="ch-num">Chapter 21 · Part IV</span>
 <h2>My project map</h2>
 <div class="prose">
 <p>I built three projects to understand this world from three angles. Each answers one question a Bitcoin Finance team actually deals with, using public filings only.</p>
@@ -917,9 +1558,9 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <h4>Three projects, three questions</h4>
 <p class="fl">Each project covers a different part of the book.</p>
 <div class="proj">
-<div class="node hot"><span class="col-h">Liability management</span><b>Preferred coverage model</b><small>Can Strategy keep paying STRF, STRC, STRE, STRK and STRD from cash, stock sales and bitcoin, and when does that stop working? Excel, 14 sheets, live formulas and a five-year path.</small><small><b>Chapters 4–7, 9 → Chapter 11</b></small></div>
-<div class="node"><span class="col-h">Capital markets</span><b>dat-accretion</b><small>What did each Strategy, BitMine and SharpLink capital action do to net coins per share, and at what price does it flip? Python, every number tied to an SEC filing, live page.</small><small><b>Chapters 3, 6, 8 → Chapter 12</b></small></div>
-<div class="node"><span class="col-h">Credit</span><b>MARA credit case</b><small>How much would a lender extend to a bitcoin miner against its coins, and on what conditions? Credit memo, decision engine, 16-sheet workbook.</small><small><b>Chapters 4, 9 → Chapter 13</b></small></div>
+<div class="node hot"><span class="col-h">Liability management</span><b>Preferred coverage model</b><small>Can Strategy keep paying STRF, STRC, STRE, STRK and STRD from cash, stock sales and bitcoin, and when does that stop working? Excel, 14 sheets, live formulas and a five-year path.</small><small><b>Builds on <a class="xref" href="#ch4">Chapter 8</a>, <a class="xref" href="#ch7">Chapter 12</a> and <a class="xref" href="#ch9">Chapter 17</a>. Write-up: <a class="xref" href="#ch11">Chapter 22</a></b></small></div>
+<div class="node"><span class="col-h">Capital markets</span><b>dat-accretion</b><small>What did each Strategy, BitMine and SharpLink capital action do to net coins per share, and at what price does it flip? Python, every number tied to an SEC filing, live page.</small><small><b>Builds on <a class="xref" href="#ch3">Chapter 6</a>, <a class="xref" href="#ch6">Chapter 11</a> and <a class="xref" href="#ch8">Chapter 14</a>. Write-up: <a class="xref" href="#ch12">Chapter 23</a></b></small></div>
+<div class="node"><span class="col-h">Credit</span><b>MARA credit case</b><small>How much would a lender extend to a bitcoin miner against its coins, and on what conditions? Credit memo, decision engine, 16-sheet workbook.</small><small><b>Builds on <a class="xref" href="#ch4">Chapter 8</a> and <a class="xref" href="#k1">Chapter 16</a>. Write-up: <a class="xref" href="#ch13">Chapter 24</a></b></small></div>
 </div>
 </figure>
 <figure class="figure">
@@ -941,7 +1582,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 </div>
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
-<section class="chapter" id="ch11"><span class="ch-num">Chapter 11 · Project</span>
+<section class="chapter" id="ch11"><span class="ch-num">Chapter 22 · Project</span>
 <h2>The preferred coverage model</h2><div class="status-row"><span>Excel formulas and two native What-If Data Tables</span><span>Revised Oct 16, 2026</span><span>Mac Excel verification pending</span></div>
 <div class="prose"><p>The question is how long cash and common issuance can fund preferred dividends and debt interest, and how convertible puts change that answer. The workbook includes STRF, STRC, STRE, STRK and STRD.</p><p><a href="Strategy_Preferred_Coverage_Model.xlsx">Download the Excel workbook</a>. The full model calculates inside Excel. The web calculator below reproduces its snapshot coverage formulas.</p></div>
 <figure class="figure"><h4>Cash charges and cash available, before principal repayments</h4><div class="tbl"><table><thead><tr><th>Measure</th><th>Oct 15 snapshot</th><th>Basis</th></tr></thead><tbody>
@@ -951,7 +1592,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <div class="warn"><b>Review still required</b>The native Data Tables are authored; their behavior, charts, dropdowns and formatting still need Microsoft Excel on the Mac. Excel review contains an exact Goal Seek exercise and blank receipt fields. Q3 counts cannot be refreshed before the Q3 filing is available.</div>
 <div class="check"><p>Check yourself</p><details><summary>Why can 15.2 years of static coverage coexist with a financing problem?</summary><p>The static measure treats the ATM as usable and omits principal. A dated path can lose market access before a put or cash payment is due.</p></details></div><p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 <section class="chapter" id="ch12">
-<span class="ch-num">Chapter 12 · Project</span>
+<span class="ch-num">Chapter 23 · Project</span>
 <h2>dat-accretion: one ruler for every capital action</h2>
 <div class="status-row"><span>Python + public page</span><span>v1 built; weekly refresh</span><span>rahilbhavan.github.io/dat-accretion</span></div>
 <div class="prose">
@@ -982,12 +1623,12 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <h4>How it's built</h4>
 <p>Each weekly 8-K is parsed into actions (one row each, linked to its filing). Balances are rolled forward from 10-Q anchors, and each week's change in net coins per share is split into price, convert flips, each action, carry and a residual. A done check compares the rebuild against live sources before the page updates. There's also a 24-lesson course in the repo that teaches it from scratch.</p>
 <h4>What it taught me for this book</h4>
-<ul><li>The rules table in Chapter 3.</li><li>Why net mNAV, not basic mNAV, is the number to watch.</li><li>That Strategy's 2026 buybacks were accretive on its own definition every week.</li></ul>
+<ul><li>The rules table in <a class="xref" href="#ch3">Chapter 6</a>.</li><li>Why net mNAV, not basic mNAV, is the number to watch.</li><li>That Strategy's 2026 buybacks were accretive on its own definition every week.</li></ul>
 </div>
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
 <section class="chapter" id="ch13">
-<span class="ch-num">Chapter 13 · Project</span>
+<span class="ch-num">Chapter 24 · Project</span>
 <h2>MARA credit case: the lender's view</h2>
 <div class="status-row"><span>Credit memo + decision engine + workbook</span><span>mara.rahilbhavan.com</span><span>Hypothetical facility, public filings</span></div>
 <div class="prose">
@@ -1016,7 +1657,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
 <section class="chapter" id="ch14">
-<span class="ch-num">Chapter 14</span>
+<span class="ch-num">Chapter 25</span>
 <h2>Interview prep: twelve questions</h2>
 <div class="prose"><p>Answer each one out loud in under a minute before opening it. The answers use this book's numbers. Refresh them after Q3.</p></div>
 <div class="check">
@@ -1039,15 +1680,38 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 </div>
 <p class="meta">Core source: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526419726/mstr-ex99_1.htm">filing or issuer capital framework</a>. Source dates and estimates are listed with the workbook inputs and in Appendix B.</p></section>
 
-<section class="chapter" id="ch15"><span class="ch-num">Chapter 15</span><h2>Trading prices, tax and accounting</h2><div class="prose">
-<h3>A dividend rate is different from a market yield</h3><p>The rate applies to the stated amount. Current yield divides the annual dividend by the traded price. For a fixed 10% rate on $100 stated amount, the annual dividend is $10. At an illustrative $80 price, current yield is 12.5%; at $110, it is 9.09%. These are illustrations, not quotes.</p><p>A higher current yield can reflect credit concerns, liquidity, interest rates or structural differences. It does not measure expected total return. A perpetual preferred has no scheduled maturity at which the investor is assured $100. STRK’s conversion feature, STRC’s variable rate, STRE’s euro payments and the seniority ladder all affect comparisons.</p><p>Use the same quote time and currency for all five products. The workbook preserves source dates; it does not claim a refreshed executable quote. Dividend yield is not a yield to maturity or a guarantee of payment.</p>
-<h3>Return of capital still consumes cash</h3><p>Strategy reported that its 2025 preferred distributions were return of capital for U.S. federal tax purposes to the extent of each holder’s basis. That reduces basis; distributions above basis are capital gains. The company’s expectation for future treatment depends on tax earnings and profits and can change. Tax classification does not reduce the issuer’s cash dividend obligation.</p><p><a href="https://www.strategy.com/press/strategy-announces-fourth-quarter-2025-financial-results_02-05-2026">February results and tax explanation</a>; <a href="https://www.strategy.com/investor-relations/dividend-return-of-capital">Forms 8937 and issuer tax records</a>. These describe issuer reporting, not a personalized tax conclusion.</p>
-<h3>Fair-value profit does not pay a dividend</h3><p>Strategy adopted ASU 2023-08 in 2025. Changes in bitcoin fair value enter reported net income. An unrealized gain raises accounting earnings without producing cash. A fair-value loss can be recorded while the company still holds a cash reserve. The coverage model therefore separates cash charges, available liquidity and bitcoin value.</p><p><a href="https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm#">Q2 filing, digital-assets accounting policy</a>. A bitcoin sale can create cash, with taxes and execution costs that the snapshot calculator does not estimate.</p>
-<h3>The software business remains an operating business</h3><p>Q2 2026 revenue was $122.4M and gross profit was $81.6M. For scale only, four times that quarter’s revenue is $489.6M, about 31% of the model’s $1,559.7M annual cash charges. Revenue is before operating expenses, taxes, reinvestment and working capital, so this comparison is not operating cash coverage. The model assumes no software cash contribution until a source-backed cash forecast is added.</p><p><a href="https://www.strategy.com/press/strategy-announces-second-quarter-2026-financial-results_07-30-2026">Q2 2026 results</a>.</p></div><div class="check"><p>Check yourself</p><details><summary>Can return-of-capital treatment make a dividend free for Strategy?</summary><p>No. It concerns the holder’s tax reporting. The issuer still pays the cash.</p></details></div></section>
-<section class="chapter" id="ch16"><span class="ch-num">Chapter 16</span><h2>Comparing treasury companies</h2><div class="prose"><p>Apply the same questions to each firm: what assets does it hold, what cash can those assets generate, what claims rank ahead of common, and what funding is available when issuance slows? Using Strategy’s net-coin definition across firms creates a comparison, not an endorsement of that definition.</p></div><figure class="figure"><h4>Different assets create different cash questions</h4><div class="tbl"><table><thead><tr><th>Company</th><th>Mechanism</th><th>What the coverage model must add</th></tr></thead><tbody><tr><td>Strategy</td><td>BTC reserve, common and preferred capital</td><td>Dividend resets, euro exposure, put dates, USD Reserve and issuance demand</td></tr><tr><td>BitMine</td><td>ETH treasury and staking; perpetual preferred funding</td><td>Staking receipts after costs, lock-up/withdrawal constraints, ETH-price exposure, preferred cash charges</td></tr><tr><td>Metaplanet</td><td>BTC treasury, preferred capital and an income-generation business</td><td>JPY/USD exposure, local financing terms, option income and its associated liabilities</td></tr></tbody></table></div><figcaption>Qualitative mechanisms, not a ranking. Sources: <a href="https://bitminetech.io/wp-content/uploads/2025/07/BitMine-Presentation-July-27th-2025.pdf">BitMine’s treasury presentation</a>; <a href="https://www.sec.gov/Archives/edgar/data/1829311/000087666126000522/BMNP061126.pdf">NYSE’s BMNP listing certification</a>; <a href="https://metaplanet.jp/media-resources/en/845ccc23-254f-4ec0-9964-f9c1f5f5e15d/fiscal-year-2025-earnings-presentation-1771553917494.pdf">Metaplanet FY2025 presentation</a>. Current security terms require dated filings before quantitative comparison.</figcaption></figure><div class="prose"><h3>How to make the comparison fair</h3><p>Match observation dates, currencies and dilution definitions. Deduct senior claims once. Do not apply a staking yield to the whole treasury if only some ETH is staked; do not treat option premiums as risk-free recurring earnings. Compare net cash after costs with cash charges, and show principal deadlines separately.</p><p>The dat-accretion project asks a different question: whether a capital rotation changes net coins per share at disclosed prices. A rotation can add net coins per share while cash coverage weakens. Both measures are needed to describe the tradeoff.</p></div></section>
+<section class="chapter" id="x1">
+<span class="ch-num">Appendix A</span>
+<h2>Formula sheet</h2>
+<div class="prose"><p>Every calculation in this book, in one place. $ figures in millions unless noted. Example values are the Oct 2026 snapshot.</p></div>
+<figure class="figure">
+<div class="tbl"><table>
+<thead><tr><th>Measure</th><th>Formula</th><th class="r">Example</th></tr></thead>
+<tbody>
+<tr><td>Annual dividend on a preferred</td><td>stated amount × shares × rate</td><td class="r">STRC: 8,792 × 12% = 1,055</td></tr>
+<tr><td>Current yield</td><td>annual dividend ÷ market price</td><td class="r">$10 ÷ $80 = 12.5%</td></tr>
+<tr><td>Annual cash charges</td><td>Σ cash dividends + debt interest</td><td class="r">1,560</td></tr>
+<tr><td>Reserve coverage (months)</td><td>USD Reserve ÷ annual charges × 12</td><td class="r">4,880 ÷ 1,560 × 12 = 37.5</td></tr>
+<tr><td>Headroom over policy</td><td>Reserve − charges × (policy months ÷ 12)</td><td class="r">4,880 − 1,560 = 3,320</td></tr>
+<tr><td>Net assets</td><td>bitcoin + cash − debt − preferred</td><td class="r">69,668 + 5,521 − 20,503 = 54,686</td></tr>
+<tr><td>Basic mNAV</td><td>market cap ÷ bitcoin value</td><td class="r">63,808 ÷ 69,668 = 0.92x</td></tr>
+<tr><td>Enterprise-value mNAV</td><td>(market cap + debt + preferred − cash) ÷ bitcoin value</td><td class="r">1.13x</td></tr>
+<tr><td>Net mNAV</td><td>share price ÷ (net bitcoin per diluted share × BTC price)</td><td class="r">≈ 1.17–1.19x</td></tr>
+<tr><td>Leverage of common at NAV</td><td>bitcoin value ÷ net assets</td><td class="r">69,668 ÷ 54,686 = 1.27x</td></tr>
+<tr><td>BTC cover through a rank</td><td>bitcoin value ÷ cumulative claims through that rank</td><td class="r">STRD: 3.4x</td></tr>
+<tr><td>BTC price where cover = 1.0x</td><td>cumulative claims ÷ BTC held</td><td class="r">20,503 ÷ 848,250 = $24,171</td></tr>
+<tr><td>Carry as % of bitcoin</td><td>annual charges ÷ bitcoin value</td><td class="r">1,560 ÷ 69,668 = 2.2%</td></tr>
+<tr><td>Dilution to fund a year</td><td>annual charges ÷ market cap</td><td class="r">≈ 2.4%</td></tr>
+<tr><td>Change in net bitcoin per share from selling common</td><td>k × (1 − 1/m), with k = $ raised ÷ (BTC price × shares)</td><td class="r">adds when m &gt; 1</td></tr>
+<tr><td>Rotation break-even (sell common, retire preferred)</td><td>adds while m &gt; preferred price ÷ $100</td><td class="r">STRC below $100 × m</td></tr>
+<tr><td>Years covered by Reserve + stock sales</td><td>if s &lt; C and the ATM lasts: R ÷ (C − s); else (R + ATM) ÷ C</td><td class="r">15.2 yrs (capacity, not a forecast)</td></tr>
+</tbody></table></div>
+<figcaption>R = Reserve, C = annual charges, s = stock sales per year, m = net mNAV. Sources and dates for every input: <a class="xref" href="#sources">Appendix C</a>.</figcaption>
+</figure>
+</section>
 
 <section class="chapter" id="glossary">
-<span class="ch-num">Appendix A</span>
+<span class="ch-num">Appendix B</span>
 <h2>Glossary</h2>
 <dl class="gloss">
 <dt>Amplification</dt><dd>Strategy's word for leverage: using debt and preferreds so common holders get more than 1x bitcoin exposure.</dd>
@@ -1056,26 +1720,40 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <dt>BTC Gain / BTC $ Gain</dt><dd>BTC Yield expressed in coins, or in dollars.</dd>
 <dt>BTC Monetization Program</dt><dd>Board-approved rules for selling bitcoin: up to $1.25B into the Reserve, for dividends or interest when better than issuing stock, or to fund buybacks.</dd>
 <dt>BTC Yield</dt><dd>% change in bitcoin per diluted share over a period. A company-defined measure, not GAAP.</dd>
+<dt>CAMT</dt><dd>The US 15% corporate alternative minimum tax. Strategy said in Oct 2025 it no longer expects to owe it on unrealized bitcoin gains, after IRS interim guidance.</dd>
 <dt>Capital stack</dt><dd>All claims on a company, ordered from first-paid (senior) to last-paid (common).</dd>
+<dt>Carry</dt><dd>The yearly cost of the claims ahead of common, here about $1.56B, or 2.2% of the bitcoin's value.</dd>
 <dt>Certificate of designation</dt><dd>The legal document that sets a preferred stock's terms: rate, ranking, what happens if dividends are skipped.</dd>
+<dt>Convertible arbitrage</dt><dd>A hedge-fund strategy: buy a convertible, short the stock, profit from volatility. The main buyers of Strategy's converts.</dd>
 <dt>Convertible note</dt><dd>Debt the holder can swap into shares at a set conversion price. Usually low coupon.</dd>
+<dt>Cost of capital</dt><dd>What a company gives up to get money: interest, dividends, or a slice of future value for new shares.</dd>
 <dt>Cumulative / non-cumulative</dt><dd>Cumulative: a skipped dividend is still owed (and may compound). Non-cumulative (STRD): it's simply gone.</dd>
+<dt>Current yield</dt><dd>Annual dividend ÷ market price. Differs from the stated rate whenever the price isn't $100.</dd>
 <dt>Digital credit</dt><dd>Strategy's name for its preferreds: fixed-income securities backed by its bitcoin.</dd>
+<dt>Fair-value accounting</dt><dd>Marking bitcoin to market every quarter (ASU 2023-08, adopted 2025). Moves reported profit; produces no cash.</dd>
+<dt>Fundamental-change put</dt><dd>A preferred holder's right to sell back at the stated amount after events such as a takeover.</dd>
+<dt>Issuer call</dt><dd>Strategy's right to redeem a series: if under 25% remains, after a tax event, or for STRC at $101 any time.</dd>
+<dt>Leverage</dt><dd>Using fixed claims to own more of an asset. Strategy's common owns about 1.27x bitcoin at net asset value.</dd>
 <dt>Liquidation preference / stated amount / notional</dt><dd>The face value of a preferred, usually $100 a share (€100 for STRE). Dividends are a percentage of it.</dd>
+<dt>LTV (loan-to-value)</dt><dd>Claims ÷ asset value. Used here for the bitcoin cushion beneath each preferred.</dd>
 <dt>mNAV</dt><dd>Multiple of net asset value: how the market values the company relative to its bitcoin. Three versions: basic, enterprise value and net (Chapter 8).</dd>
+<dt>NAV (net asset value)</dt><dd>Assets minus all claims ahead of common. For Strategy: bitcoin + cash − debt − preferred.</dd>
 <dt>Net bitcoin per share</dt><dd>(Bitcoin + cash − debt − preferred, in bitcoin) ÷ fully diluted shares. The basis of net mNAV.</dd>
 <dt>Pari passu</dt><dd>Ranking equally. None of Strategy's five preferreds are pari passu with each other.</dd>
 <dt>Perpetual</dt><dd>Never matures. The issuer never has to repay principal but pays dividends indefinitely.</dd>
 <dt>Put (holder put)</dt><dd>A convertible holder's right to demand repayment on a set date.</dd>
+<dt>Reflexivity</dt><dd>When a price affects the thing it values. MSTR's premium enables the growth that justifies the premium.</dd>
 <dt>Rotation</dt><dd>Selling one security to buy back another, e.g. selling MSTR to retire STRC.</dd>
 <dt>Senior / junior</dt><dd>Who gets paid first. Debt is senior to all preferreds; STRF is senior to STRC, and so on down to STRD.</dd>
+<dt>Shelf registration</dt><dd>An SEC filing that lets a company sell securities over time, e.g. through an ATM.</dd>
+<dt>Stated amount</dt><dd>A preferred's face value ($100; €100 for STRE). Dividends are a percentage of it.</dd>
 <dt>Step-up</dt><dd>STRF and STRE's penalty: if dividends go unpaid, the rate rises 1% per period up to 18%.</dd>
 <dt>USD Reserve</dt><dd>Cash ring-fenced for dividends and interest. Policy: at least 12 months of charges.</dd>
 </dl>
 </section>
 
 <section class="chapter" id="sources">
-<span class="ch-num">Appendix B</span>
+<span class="ch-num">Appendix C</span>
 <h2>Sources</h2>
 <div class="prose">
 <p>Filings first; press coverage is marked. Accessed Oct 16, 2026.</p>
@@ -1093,6 +1771,21 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 <li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000105044626000020/ex42descriptionofregistere.htm">10-K Exhibit 4.2, description of securities</a></li>
 <li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526413159/d503578ddef14a.htm">Definitive proxy, Oct 28, 2026 special meeting</a></li>
 <li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525271105/d78313dex991.htm">8-K, Nov 2025</a>: STRE IPO pricing</li>
+</ul>
+<h4>Decision history (added Oct 19, 2026)</h4><ul class="sources">
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000156459020033897/mstr-ex991_10.htm">Q2 2020 results, Jul 28 2020</a>: capital allocation plan</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312520215604/d921849dex991.htm">Aug 11 2020 release</a>: first 21,454 BTC; Saylor's rationale</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312520245823/d66338dex99a5iv.htm">Tender offer result, Sep 2020</a>: $60.5M of shares bought</li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312520244732/d937119d8k.htm">Treasury Reserve Policy 8-K, Sep 2020</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312520313349/d55072d8k.htm">Dec 2020 convertible notes</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312521045792/d119477d8k.htm">Feb 2021 convertible notes</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312521185538/d183783d8k.htm">Jun 2021 secured notes</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312522087494/d312252d8k.htm">Silvergate loan, Mar 2022</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312523079839/d467124d8k.htm">prepaid Mar 2023</a> · <a href="https://fortune.com/2022/05/04/michael-saylor-microstrategy-margin-call-bitcoin/">Fortune on the margin-call level (press)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000156459023002012/mstr-10k_20221231.htm">FY2022 10-K</a>: impairments and 2022 low · <a href="https://www.theblock.co/news/markets/2022-08-02-michael-saylor-to-step-down-as-microstrategy-ceo-shift-to-executive-chairman-role-161025">The Block on the 2022 leadership change (press)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000095017024119263/mstr-20240930.htm">Q3 2024 10-Q</a>: secured notes redeemed; CAMT expectation · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312524262151/d850321dex992.htm">Nov 2024 0% notes due 2029</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525225904/d807448d8k.htm">Oct 1 2025 8-K</a>: CAMT no longer expected · <a href="https://www.vedderprice.com/irs-provides-interim-guidance-with-respect-to-portions-of-proposed-camt-regulations-to-be-withdrawn-interim-guidance-provides-that-unrealized-cyptocurrency-gains-not-subject-to-camt">Vedder Price on Notices 2025-46/49 (law firm)</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525001543/d882784dex991.htm">Jan 2025 release</a>: preferreds within the 21/21 Plan · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525124557/d860553dfwp.htm">May 2025 presentation</a>: "pristine fixed income"</li>
+<li>Preferred IPO pricing 8-Ks: <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525017726/d830622d8k.htm">STRK</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525059786/d866395d8k.htm">STRF</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525136301/d947335d8k.htm">STRD</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525164852/d65643d8k.htm">STRC</a></li>
+<li>Prospectuses (call and put terms): <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525018819/d863145d424b5.htm">STRK</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525060332/d927140d424b5.htm">STRF</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525137186/d125757d424b5.htm">STRD</a> · <a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312525165531/d852456d424b5.htm">STRC</a></li>
+<li><a href="https://www.sec.gov/Archives/edgar/data/1050446/000119312526401636/mstr-20260924.htm">Sep 24 2026 8-K</a>: daily dividends meeting · <a href="https://www.ccn.com/education/crypto/strategy-stock-mnav-premium-explained/">CCN on the Nov 2024 premium (secondary)</a></li>
 </ul>
 <h4>Press and secondary</h4>
 <ul class="sources">
@@ -1117,7 +1810,7 @@ input[type=range]{width:100%;accent-color:#333}.calc-grid{display:grid;grid-temp
 
 </div>
 </div>
-<footer class="footer">A student trynna learn · Strategy textbook v2 · Built Oct 16, 2026 from public filings · Educational project. Excel verification and Q3 refresh pending.</footer>
+<footer class="footer">A student trynna learn · Strategy textbook v3 · Expanded Oct 19, 2026 from public filings · Educational project. Excel verification and Q3 refresh pending.</footer>
 </div>
 <script>// Same snapshot equations as Coverage/Liquidity; all money is USD millions.
 const snapshot={asOf:'2026-10-15',btc:848250,spot:82131,reserve:4880,atm:18807.6,fdso:431.0530776696268,netValue:55521.74565,baseCharges:1559.673002,strcNotional:8792.1436,baseRate:.12,mnav:1.1745671782680673,adv:22,participation:.02,tradingDays:252,displayCap:50};

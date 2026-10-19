@@ -1,0 +1,46 @@
+<section class="chapter" id="s1">
+<span class="ch-num">Chapter 18</span>
+<h2>Three futures, quarter by quarter</h2>
+<div class="prose">
+<p class="lede-big">Numbers stick better as stories. Here are three five-year paths for Strategy, each told the way a treasurer would live through it. The figures come from the coverage model's 20-quarter path (<a class="xref" href="#ch11">Chapter 22</a>).</p>
+<p>These are model runs on stated assumptions, not forecasts. Every path pays the full $6.7B of convertible puts in cash when they fall due, which is the harshest assumption.</p>
+</div>
+
+<figure class="figure">
+<h4>Five years, three outcomes</h4>
+<p class="fl">Model results, 20 quarters from Oct 16, 2026. "Funding gap" means cash the model can't find from the Reserve or stock sales. Strategy would have to sell bitcoin, issue preferreds, refinance or skip payments to close it.</p>
+<div class="tbl"><table>
+<thead><tr><th>Path</th><th>What it assumes</th><th class="r">Stock sold over 5 yrs</th><th class="r">Cash at the end</th><th class="r">Funding gap</th></tr></thead>
+<tbody>
+<tr class="hl"><td><b>Base</b></td><td>Today's prices; stock sells at the modelled share of daily volume</td><td class="r">$11.1B</td><td class="r">$1.5B</td><td class="r">None</td></tr>
+<tr><td><b>No stock sales</b></td><td>Today's prices, but Strategy sells no common at all</td><td class="r">$0</td><td class="r">$0</td><td class="r">$9.5B</td></tr>
+<tr><td><b>Severe</b></td><td>BTC −70%, mNAV 0.8x, STRC at 15%, euro +10%</td><td class="r">$0</td><td class="r">$0</td><td class="r">$10.8B</td></tr>
+</tbody></table></div>
+<figcaption>Source: the repository's recorded LibreOffice recalculation cases, Oct 16, 2026. Demand coefficients and the 1.0x gate are editable model assumptions, not calibrated forecasts.</figcaption>
+</figure>
+
+<h3>Path 1: Base. The machine runs</h3>
+<div class="prose">
+<p><b>Years 1–2.</b> MSTR trades above its net assets, so Strategy keeps selling a little stock every day. The proceeds pay most of the ~$390M quarterly dividends and interest, so the Reserve barely moves. STRC trades near $100, and the rate holds at 12%.</p>
+<p><b>Years 2–3.</b> The convertible puts arrive: about $1.0B in Sep 2027, then $2.0B, $1.5B and $1.4B through 2028. Each one is a large one-time cash need, paid from stock sales and the Reserve.</p>
+<p><b>Year 5.</b> About $11.1B of common has been sold in total, every put has been paid, and $1.5B of cash is left. The cost is dilution: common holders now share the company with many more shares, though each share still holds a similar amount of bitcoin as long as the stock sold above net assets.</p>
+</div>
+
+<h3>Path 2: The market shuts</h3>
+<div class="prose">
+<p>Prices are unchanged, but suppose nobody will buy MSTR, or the stock trades below its net assets so selling it would cut bitcoin per share. The Reserve pays the dividends for about three years. The puts arrive in the middle of that. By the end of the path, the model is <b>$9.5B short</b>. To close that gap, Strategy has four real options: sell bitcoin (allowed into the Reserve up to $1.25B, more with board approval), pay STRK in shares, sell preferreds if they trade at $100, or negotiate with convertible holders.</p>
+</div>
+
+<h3>Path 3: Severe</h3>
+<div class="prose">
+<p><b>Quarter 1.</b> Bitcoin falls 70% to about $24,600. Bitcoin's cover over the debt and preferreds drops to about 1.0x. MSTR trades below its net assets, so stock sales stop.</p>
+<p><b>Quarters 1–4.</b> STRC's price falls and its rate is pushed to 15%. Charges rise to about $1.83B a year. The Reserve now lasts about 32 months instead of 37.</p>
+<p><b>Years 2–3.</b> The Reserve runs down while puts fall due. In this scenario MSTR is far below the conversion prices, so holders will want cash. The gap reaches <b>$10.8B</b> over the path.</p>
+<p><b>The choice at the end.</b> Selling bitcoin at the bottom, the thing Strategy exists not to do, or leaning on the preferred terms: skipping STRD (non-cumulative), paying STRK in shares, and only then the senior layers, where STRF's and STRE's step-ups make skipping very expensive.</p>
+</div>
+<div class="key"><b>What the three paths teach</b>The near term is safe in all three: the Reserve covers about three years. The danger is the 2027–28 put window meeting a closed equity market. That's the date to watch, and it's why the coverage model tracks puts separately from dividends.</div>
+<div class="check"><p>Check yourself</p>
+<details><summary>In the Base path, why doesn't the Reserve shrink much?</summary><p>Daily stock sales above net assets pay most of the dividends, so the Reserve is rarely drawn on.</p></details>
+<details><summary>What's the first lever Strategy would likely pull in Path 3, and why that one?</summary><p>Probably bitcoin sales into the Reserve or paying STRK in shares. Skipping STRD is legal but damages trust in every other preferred, and skipping STRF or STRE triggers expensive step-ups.</p></details>
+</div>
+</section>
