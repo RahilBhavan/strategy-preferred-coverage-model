@@ -118,6 +118,6 @@ Each input row in `Inputs` and `Net NAV` lists its source and observation date. 
 
 ## License
 
-No license file yet. The fonts in `assets/fonts/` keep their own licenses.
+[MIT](LICENSE) for this project's code, workbook and analysis. The fonts in `assets/fonts/` keep their own licenses.
 
 Part of [Rahil Bhavan's projects](https://github.com/RahilBhavan).
