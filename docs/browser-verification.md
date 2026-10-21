@@ -2,6 +2,8 @@
 
 October 16, 2026. T3 collaborative browser, local generated pages.
 
+This is a dated record. Later commits grew the textbook from 16 numbered chapters to 30 numbered chapters and three appendix sections (formula sheet, glossary, sources). This browser pass has not been repeated on the larger textbook.
+
 - Project page checked at 1280px and 390px. Page width remains within viewport; the snapshot table scrolls within its container on phones.
 - Calculator checked at base inputs and net mNAV 0.8x. Static coverage changes from 15.2 to 3.1 years with the gate. Native labelled sliders and a reset button remain keyboard-accessible HTML controls.
 - Textbook checked at 390px and 1440px. No document overflow, duplicate IDs, unresolved chapter placeholders or broken internal anchors found.
