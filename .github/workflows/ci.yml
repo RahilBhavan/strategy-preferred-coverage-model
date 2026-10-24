@@ -1,0 +1,22 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '26'
+      - name: Calculator behavior checks
+        run: node model/check-calculator.mjs
+      - name: Rebuild site and confirm it matches the committed site/
+        run: |
+          python3 textbook-source/structure.py
+          node model/build-site.mjs
+          git diff --exit-code -- site
