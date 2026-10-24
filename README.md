@@ -10,6 +10,8 @@ This Excel workbook estimates how long Strategy can pay dividends on STRF, STRC,
 
 [Download the workbook](Strategy_Preferred_Coverage_Model.xlsx)
 
+[Study course](docs/course/README.md): 16 units with four foundation lessons, Excel lab briefs, problems, exams and a capstone, built around the textbook. Learning is not assessed, and the course does not refresh the workbook's dated inputs. Build the local reader with `python3 docs/course/build-course.py` and check it with `python3 docs/course/verify-course.py`.
+
 ## Results
 
 These figures are dated and depend on the inputs. They come from the saved workbook values and from [`docs/formula-verification.json`](docs/formula-verification.json), which was recalculated in LibreOffice on October 16, 2026.

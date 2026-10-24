@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "document": "map-all-dom",
+      "result": {
+        "seen": [
+          {
+            "stage": 0,
+            "rows": 4,
+            "selected": 1,
+            "first": "01"
+          },
+          {
+            "stage": 1,
+            "rows": 4,
+            "selected": 1,
+            "first": "05"
+          },
+          {
+            "stage": 2,
+            "rows": 4,
+            "selected": 1,
+            "first": "09"
+          },
+          {
+            "stage": 3,
+            "rows": 4,
+            "selected": 1,
+            "first": "13"
+          }
+        ],
+        "width": 0,
+        "scrollWidth": 176,
+        "units": 4,
+        "stage4": true,
+        "selected": 1
+      }
+    },
+    {
+      "document": "reader-all-dom",
+      "result": {
+        "title": "Strategy economics: a complete study course",
+        "navLinks": 12,
+        "headings": 1,
+        "body": 10716
+      }
+    }
+  ],
+  "limit": "DOM and JavaScript only; viewport returned zero, so no layout claim. Screenshot preview timed out."
+}
