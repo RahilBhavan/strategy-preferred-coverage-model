@@ -1,0 +1,45 @@
+# Exam and capstone answer anchors
+
+Use only after attempting [the assessments](assessments.md). Essay rubrics reward evidence and consistent reasoning, not a preferred investment opinion.
+
+## Midterm
+
+**M1.** Opening assets = 200, residual = 100, shares = 50, residual/share = 2. After issuance: cash **74**, BTC **150**, assets **224**, residual **124**, shares **60**, residual/share **2.066667**. After acquisition: cash **44**, BTC **180**; assets, claims and per-share residual unchanged. After the 20% BTC loss: BTC **144**, cash **44**, assets **188**, residual **88**, residual/share **1.466667**. After distribution: cash **36**, BTC **144**, assets **180**, residual **80**, residual/share **1.333333**. The next 40 put has a **four cash gap**. Issuance is financing; purchase exchanges assets; remeasurement changes value without cash; distribution consumes cash. Score ledger 15, per-share work 5, classifications/gap 5.
+
+**M2.** Bond = 4/1.08 + 104/1.08² = **92.866941**. Perpetuity = 8/0.10 = **80**. Coupon uses face, current yield uses price and current cash payout, modeled yield discounts the complete payment stream, and stated residual deducts a contractual amount instead of pricing that stream. State dates, credit/payment assumptions and any call/reset exclusions. Ten points for calculations and fifteen for these distinctions.
+
+**M3.** Net proceeds = **88**. Carry = 10/88 = **11.363636%**. Initial stated residual change = **−12**. BTC after 20% appreciation = **105.6**; residual after 100 claim and ten distribution = **−4.4**. Zero terminal residual requires 110/88 − 1 = **25% BTC appreciation**. A profitable mark is not payment cash; sales or other funding are needed. The question's face-value terminal subtraction does not constitute a discounted full-life valuation. Calculations 15, limits 10.
+
+**M4.** Full-credit responses explain the option/put/dilution and fees of a zero-coupon convertible; perpetuals' series-specific redemption/repurchase and payout rights; and the difference between conditional per-share accretion, executed financing and economic value. Cite the note indenture, preferred certificate/amendments and source-to-model issuance calculation. A valid counterexample is issuing common at a metric premium and immediately consuming more than its accretion benefit in distributions/fees. Three corrections 15, evidence 5, counterexample 5.
+
+## Final
+
+**F1.** Uses = 4 × 4 + 10 = **26**; maximum resources = 15 + 10 = **25**; minimum gap = **one**. A feasible prefunding schedule issues **3, 3, 1, 3**. End-Q1 cash 14; Q2 cash 3 after its 14 bill; Q3 cash zero; Q4 cash zero with unmet need one. Reactive issuance is **0, 3, 3, 3**. Q1 ends at 11; Q2 ends at zero; Q3 has first unmet need one, Q4 another one, with total capacity one unused. Continuing the diagnostic after nonpayment does not imply the business can ignore its consequences. Aggregate 5, dated schedule 15, interpretation 5.
+
+**F2.** Require execution prices on both legs, issuance fees, exact claims legally retired, distribution savings and dates, new common shares, reserve targets, market-access assumptions and displaced uses. Compare retaining cash, buying BTC, retiring another claim and doing nothing where feasible. Reconcile the issuer metric separately from cash and value. A market discount to stated amount alone proves neither solvency nor a bargain. Bridge 15, alternative 5, uncertainty 5.
+
+**F3.** Preferred market value and the same distributions' PV overlap. Operating cash may already be included in software valuation. Debt face and preferred market value may mix bases without a clear bridge. A premium multiple is an argued price/value relation, not an additional asset. A coherent approach values operating cash flows and non-operating assets, then subtracts consistently valued claims; alternatively value cash flows directly to common without subtracting the same claims again. Reconstruct the issuer KPI separately under its own dated definition. A financing-franchise value requires feasible issuance and investor-demand assumptions and a counterfactual. Defects 10, repair 10, limits 5.
+
+**F4.** Use the contemporaneous pricing release, final prospectus, certificate/indenture and amendments, executed proceeds/fees, financial position, cash commitments, available alternatives and governance disclosures. Freeze the decision-date information set. Label management's stated rationale and analyst inference separately. Test then-feasible alternatives using then-available prices and forecasts; describe realized outcomes separately. Today's interview cannot retroactively prove private intent. A reasonable uncertainty is the true marginal buyer's motive or the outcome of an unexecuted alternative. Evidence 15, counterfactual 5, uncertainty 5.
+
+## Capstone: independent reconciliation anchors
+
+These anchors check arithmetic. They do not choose the committee recommendation for you.
+
+Opening stated residual = 1,000 + 100 − 200 − 100 − 100 = **800 million**, or **$8/share**. Common net proceeds = **198 million**, new shares = **18.181818 million**. Initial residual/share = 998/118.181818 = **$8.444615**. Preferred net proceeds = **196 million**, new stated claim = **250 million**; initial stated residual/share = 746/100 = **$7.46**. A market-valued residual could differ. Investing rather than retaining proceeds leaves initial total asset value unchanged before any price movement.
+
+At $100,000/BTC, deploying common proceeds buys **1,980 BTC**; deploying preferred proceeds buys **1,960 BTC**. Immediate stress halves the value of every coin held after the action, including newly bought coins. Cash retained does not experience that BTC mark.
+
+Base existing annual preferred distributions = **22 million**. Debt interest is one per quarter in Q1–Q4 and 0.7 in Q5–Q8: total **6.8 million**. Existing preferred distributions over eight quarters = **44 million**. Puts = **200 million**. Total base cash uses without new preferred = **250.8 million**. The new preferred adds **6.25 million each quarter**, or **50 million** over eight quarters. A model keeping interest at one in Q5–Q8 overstates costs by 1.2 million.
+
+Base retain-cash common case: opening available cash **298 million**, total uses **250.8**, ending cash **47.2**, no BTC sales. Base retain-cash preferred case: cash **296**, uses **300.8**, total additional funding need **4.8** before BTC sales. No-financing case begins with 100 cash and needs **150.8** from BTC sales over two years. Deploying proceeds in BTC leaves opening cash at 100; the corresponding base sale requirements are **150.8** for common financing and **200.8** for preferred financing. At a flat $100,000/BTC, these are **1,508** and **2,008 BTC**, respectively. Show sale dates as well as totals.
+
+The stress rate adds **six million** of C distributions in Q5–Q8. With common proceeds retained, ending cash is **41.2 million** and no sale is needed. With preferred proceeds retained, **10.8 million** must be funded from BTC sales. With no financing or with common proceeds deployed, the cash need from sales is **156.8 million**; with preferred proceeds deployed it is **206.8 million**. These are cash amounts, not fixed coin quantities. Divide each dated shortage by that quarter's BTC price to obtain coins sold.
+
+Stress prices in dollars are **50,000, 50,000, 50,000, 50,000, 62,500, 75,000, 87,500, 100,000**. For the no-financing case, cash after Q4 is **14 million**; after Q5, **6.3 million**. Sell **18.666667 BTC in Q6**, **88 BTC in Q7**, and **1,477 BTC in Q8** to meet the remaining bills. Total sold **1,583.666667 BTC**; ending **8,416.333333 BTC**, worth **841.633333 million**. Any different result must reconcile its cash timing and interest/rate convention.
+
+For common proceeds deployed, this same sale schedule leaves **10,396.333333 BTC**. For preferred proceeds retained, the entire **10.8 million** gap occurs in Q8, costing **108 BTC**, leaving **9,892 BTC**. For preferred proceeds deployed, cash runs short in Q4: sales are **220 BTC in Q4**, **223.2 in Q5**, **186 in Q6**, **159.428571 in Q7**, and **1,539.5 in Q8**. Total **2,328.128571 BTC**; ending **9,631.871429 BTC**. These differences show why the cash-need total cannot replace the path calculation.
+
+All base puts retire the modeled debt by Q8. A final stated residual should therefore subtract the two original preferred claims and, when issued, the new preferred, but no retired debt. Distinguish total residual from residual/share when comparing common issuance with the other actions. Assess the risk along the path as well as the endpoint; do not infer a fair stock price from this teaching residual.
+
+For the real-company dossier, there is no prewritten correct recommendation. Grade the traceable evidence, contract accuracy, financing schedule, coherent valuation, credible alternatives and willingness to identify missing facts. A recommendation is conditional on those facts. The capstone has not been completed merely because these solution anchors exist.

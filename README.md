@@ -10,6 +10,8 @@ This Excel workbook estimates how long Strategy can pay dividends on STRF, STRC,
 
 [Download the workbook](Strategy_Preferred_Coverage_Model.xlsx)
 
+[Study course](docs/course/README.md): 16 units with four foundation lessons, Excel lab briefs, problems, exams and a capstone, built around the textbook. Learning is not assessed, and the course does not refresh the workbook's dated inputs. Build the local reader with `python3 docs/course/build-course.py` and check it with `python3 docs/course/verify-course.py`.
+
 ## Results
 
 These figures are dated and depend on the inputs. They come from the saved workbook values and from [`docs/formula-verification.json`](docs/formula-verification.json), which was recalculated in LibreOffice on October 16, 2026.
@@ -45,7 +47,7 @@ These figures are dated and depend on the inputs. They come from the saved workb
 
 To use the model, open `Strategy_Preferred_Coverage_Model.xlsx` and start on `Dashboard`. Change the blue inputs and the scenario selector in `Dashboard!B4`. The native Data Tables and Goal Seek need desktop Excel. [`docs/excel-review.md`](docs/excel-review.md) lists the exact Excel checks.
 
-Prerequisites: Node 26.8.1 and Python 3.14 were used for the checks below. The workbook build also needs `@oai/artifact-tool`. The LibreOffice test also needs LibreOffice and `openpyxl`.
+Prerequisites: Node 26.8.1 and Python 3.14 were used for the checks below. The workbook build also needs `@oai/artifact-tool`, which is not available outside the environment that authored it (see below). The LibreOffice test also needs LibreOffice and `openpyxl`.
 
 Run the calculator test. It needs only Node:
 
@@ -62,7 +64,7 @@ python3 textbook-source/structure.py
 node model/build-site.mjs
 ```
 
-Rebuild the workbook. `@oai/artifact-tool` is not on the npm registry. An artifact runtime supplies it, and the repository does not vendor it:
+The committed `Strategy_Preferred_Coverage_Model.xlsx` is the artifact. You cannot rebuild it from a clean checkout. `model/build.mjs` imports `@oai/artifact-tool`, an internal spreadsheet library that is not on the npm registry (it returns 404), and the repository does not vendor it. The script is kept as a record of how the workbook was authored. It is not ported to an open library such as `exceljs`: the workbook has four charts and two native What-If Data Tables, which `exceljs` cannot write, so the result would not match the committed file. To check the model, open the workbook, or run the LibreOffice test below, which recalculates the committed file. With the dependency available, the build steps are:
 
 ```sh
 node model/build.mjs
