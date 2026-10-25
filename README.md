@@ -77,7 +77,7 @@ Recalculate 10 input-change cases in LibreOffice:
 python3 model/test-libreoffice.py
 ```
 
-The test edits disposable copies in a temporary directory and does not change the workbook. It rewrites `docs/formula-verification.json` with its results. Set `SOFFICE` if `soffice` is not on your `PATH`.
+The test edits disposable copies in a temporary directory and does not change the workbook. It rewrites `docs/formula-verification.json` with its results. Set `SOFFICE` if `soffice` is not on your `PATH`. Observed on 2026-10-24 with LibreOffice 26.8.1 and `openpyxl`: all assertions passed and the rewritten JSON was byte-identical to the committed file. CI runs the same test in its `libreoffice` job with the Ubuntu `libreoffice-calc` package, whose version differs from 26.8.1. That job has not run yet; the first push will show whether it passes.
 
 ## Repository layout
 

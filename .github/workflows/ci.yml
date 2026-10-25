@@ -1,0 +1,36 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '26'
+      - name: Calculator behavior checks
+        run: node model/check-calculator.mjs
+      - name: Rebuild site and confirm it matches the committed site/
+        run: |
+          python3 textbook-source/structure.py
+          node model/build-site.mjs
+          git diff --exit-code -- site
+  libreoffice:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install LibreOffice Calc and openpyxl
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libreoffice-calc
+          python -m pip install openpyxl
+      - name: Recalculate 10 input-change cases in headless LibreOffice
+        run: python model/test-libreoffice.py
