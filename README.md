@@ -7,6 +7,7 @@
 ![The project page's snapshot table: $1,559.7M of annual charges, 37.5 months from the Reserve alone, 15.2 years only if ATM demand permits, and net mNAV 1.175x](docs/images/snapshot.png)
 
 This Excel workbook estimates how long Strategy can pay dividends on STRF, STRC, STRE, STRK and STRD and the interest on its convertible notes. It uses public SEC filings and issuer releases, with balance-sheet observations through October 11, 2026 and prices from October 15, 2026. The financial model is Excel formulas: 1,551 formula cells and 124 named ranges across 14 sheets. A [project page](https://rahilbhavan.github.io/strategy-preferred-coverage-model/) and a 30-chapter [textbook](https://rahilbhavan.github.io/strategy-preferred-coverage-model/textbook.html) with a snapshot calculator explain the model.
+**Input dates:** balances Oct 11, 2026, prices Oct 15, 2026. Next refresh: after Strategy's Q3 10-Q (see [`docs/q3-refresh.md`](docs/q3-refresh.md)).
 
 [Download the workbook](Strategy_Preferred_Coverage_Model.xlsx)
 
@@ -98,6 +99,7 @@ The test edits disposable copies in a temporary directory and does not change th
 - [`docs/excel-review.md`](docs/excel-review.md): the Microsoft Excel checks and the Goal Seek exercise, not yet run.
 - [`docs/q3-refresh.md`](docs/q3-refresh.md): how to replace the estimates with Q3 10-Q figures.
 - [`docs/deployment.md`](docs/deployment.md): the deployment record and the workbook SHA-256.
+- [Related project: strategy-coverage-montecarlo](https://github.com/RahilBhavan/strategy-coverage-montecarlo): a Python simulator that extends this workbook's fixed scenario into weekly BTC, mNAV and FX paths. Its inputs are separate and frozen, so the two do not refresh together.
 
 ## Sources
 
