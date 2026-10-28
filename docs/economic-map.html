@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategy economics: every decision has three tests</title>
+<style>
+:root{--paper:#fff;--ink:#202020;--muted:#595959;--rule:#c5c5c5;--panel:#f2f2f2;--accent:#ffe14a;--body:Arial,sans-serif;--mono:ui-monospace,monospace}
+@media(prefers-color-scheme:dark){:root{--paper:#171717;--ink:#f5f5f5;--muted:#bdbdbd;--rule:#666;--panel:#262626}}
+*{box-sizing:border-box}body{background:var(--paper);color:var(--ink);font:18px/1.6 var(--body);margin:0}main{max-width:1000px;margin:auto;padding:28px 24px 56px}h1{font-size:44px;line-height:1.1;margin:16px 0 24px;text-wrap:balance}h2{font-size:29px;line-height:1.2;margin:48px 0 18px}h3{font-size:21px;margin:0 0 8px}p{max-width:76ch}a{color:inherit;text-underline-offset:4px}.kicker,.note{color:var(--muted)}.kicker{font-size:16px}.tests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}.tests p{margin:0}.mark{background:var(--accent);color:#171717;padding:0 5px}.controls{display:flex;flex-wrap:wrap;gap:24px;padding:20px 0}label{display:block;flex:1;min-width:230px}input,select{width:100%;accent-color:var(--ink);font:inherit;margin-top:12px}select{padding:8px;background:var(--paper);color:var(--ink);border:1px solid var(--rule)}output{font-family:var(--mono)}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:520px}td,th{padding:14px 10px;text-align:right;border-bottom:1px solid var(--rule)}td:first-child,th:first-child{text-align:left}caption{text-align:left;margin:12px 0;font-size:18px}.note{font-size:16px}.summary{font-size:21px}.route{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}.route section{padding:20px 0;border-bottom:1px solid var(--rule)}.route p{margin:4px 0}.source{font-size:16px;overflow-wrap:anywhere}:focus-visible{outline:3px solid var(--ink);outline-offset:4px}details{margin-top:24px}summary{cursor:pointer}@media(max-width:600px){main{padding:20px 16px 40px}.tests,.route{grid-template-columns:1fr}.tests{gap:20px}h1{font-size:40px}h2{font-size:28px}.controls{gap:14px}label{min-width:0;flex-basis:100%}}
+</style></head><body><main>
+<p class="kicker">Learning blueprint · October 23, 2026 · Illustrative amounts, not market quotes</p>
+<h1>Every financing decision has <span class="mark">three tests</span>.</h1>
+<p>Strategy raises capital through securities and allocates it across bitcoin, cash and obligations. To understand an action, trace its effect on all three tests.</p>
+<div class="tests"><section><h3>1. Per share</h3><p>What changes in net bitcoin per diluted share under the stated definition?</p></section><section><h3>2. Cash</h3><p>What must be paid, when, and from which available source?</p></section><section><h3>3. Value</h3><p>Does the risk-adjusted benefit exceed the full cost and the next-best alternative?</p></section></div>
+<p class="note">A higher per-share metric can coexist with less cash. A cash payment can be funded while dilution rises. Neither result alone establishes investment value.</p>
+<h2>One share issue, two uses of cash</h2>
+<p><b>Illustration.</b> Start with $100 of net assets and 100 common shares. Issue 20 new shares. The initial net asset value is $1 per share. No fees, taxes or asset-price changes.</p>
+<div class="controls"><label for="price">Issue price: <output id="price-label">$1.25</output><input type="range" id="price" min="0.5" max="2" step="0.01" value="1.25"></label><label for="use">Use of the proceeds<select id="use"><option value="assets">Retain cash or acquire BTC</option><option value="payout">Pay preferred distributions</option></select></label></div>
+<div class="table-wrap"><table><caption>The alternative must fund the same activity.</caption><thead><tr><th>Measure</th><th>After issuing</th><th>No new issuance</th></tr></thead><tbody><tr><td>Common shares</td><td>120</td><td>100</td></tr><tr><td>Net assets</td><td id="assets">$125.00</td><td id="alt-assets">$100.00</td></tr><tr><td>Net assets per share</td><td id="per">$1.0417</td><td id="alt-per">$1.0000</td></tr></tbody></table></div>
+<p id="common-summary" class="summary" aria-live="polite">Issuance raises $25.00. Net assets per share rise 4.17% from the starting value.</p>
+<p class="note">For the distribution case, the alternative pays the same amount from existing assets. A decline from the starting value can still be smaller than the decline under that alternative. This simplified residual is not Strategy's full net-BTC metric.</p>
+<h2>A coupon ratio is not a complete break-even</h2>
+<p><b>Illustration.</b> Issue a $100 stated preferred claim for the proceeds below. Invest the proceeds in BTC. Pay a $10 distribution at the end of one year. Measure the residual after deducting the $100 claim and the distribution.</p>
+<div class="controls"><label for="proceeds">Proceeds per $100 claim: <output id="proceeds-label">$80</output><input type="range" id="proceeds" min="60" max="110" step="1" value="80"></label><label for="growth">BTC price change over one year: <output id="growth-label">12.5%</output><input type="range" id="growth" min="-50" max="100" step="0.5" value="12.5"></label></div>
+<div class="table-wrap"><table><caption>Annual cash cost and one-year stated-claim residual answer different questions.</caption><tbody><tr><th>Cash distribution / proceeds</th><td id="carry">12.5%</td></tr><tr><th>One-year residual after claim and distribution</th><td id="residual">−$20.00</td></tr><tr><th>BTC return giving a zero residual in this example</th><td id="breakeven">37.5%</td></tr></tbody></table></div>
+<p class="note">The break-even is a one-year result under stated-claim accounting, not a perpetual annual hurdle or fair-value estimate. Market value, taxes, fees, discount rates and payment timing need a separate valuation.</p>
+<h2>The 12-unit learning route</h2>
+<p>Use the existing textbook as evidence and examples. Follow this sequence to connect the mechanisms.</p>
+<div class="route">
+<section><h3>1. Bitcoin and dollars</h3><p>Scarcity, custody and price formation. Why dollar payments still need dollar cash.</p></section>
+<section><h3>2. Why a company wrapper?</h3><p>Compare direct BTC, a fund, common and preferreds. Identify the exposure each buyer wants.</p></section>
+<section><h3>3. Assets and claims</h3><p>Reconcile assets, liabilities, preferred rights, common shares and cash flows.</p></section>
+<section><h3>4. Every security's trade</h3><p>Net proceeds, priority, currency, coupon, conversion, puts and redemption terms.</p></section>
+<section><h3>5. Issuance and dilution</h3><p>Define the metric, share denominator and use of proceeds before calculating accretion.</p></section>
+<section><h3>6. Full financing cost</h3><p>Separate cash carry, issue discounts, option cost, terminal claims and investment return.</p></section>
+<section><h3>7. Dated liquidity</h3><p>Track cash, demand for new securities and principal payments quarter by quarter.</p></section>
+<section><h3>8. The demand loop</h3><p>Trace how prices affect financing and financing affects the metrics investors observe.</p></section>
+<section><h3>9. Management's choices</h3><p>Compare BTC purchases, cash retention, issuance, repayments and repurchases on the same date.</p></section>
+<section><h3>10. Business economics</h3><p>Separate software cash generation from the economics of security issuance and distribution.</p></section>
+<section><h3>11. Control and constraints</h3><p>Voting, incentives, custody, legal rights, taxes and currency exposure.</p></section>
+<section><h3>12. Decision reconstruction</h3><p>Explain one historical choice and one adverse case against explicit alternatives.</p></section>
+</div>
+<h2>How each historical decision will be taught</h2>
+<p>Information available then → stated objective → alternatives → assets, claims, cash and shares changed → risk transferred → later observation.</p>
+<p>Keep “management said” separate from “the economic interpretation is.” Later prices cannot prove an earlier motive.</p>
+<details><summary>Closed-book learning check</summary><p>Explain why more BTC need not mean more BTC per share; why a zero coupon has a cost; why a perpetual still has obligations; and how an asset-rich company can face a cash shortfall. Then solve a new version of both examples without the answers.</p><p class="note">A source check and arithmetic checks were performed. A human comprehension test remains pending.</p></details>
+<h2>Source boundaries</h2>
+<p class="source"><a href="https://www.strategy.com/notes">Issuer definitions</a> govern net-BTC metrics. <a href="https://www.strategy.com/press/strategy-announces-digital-credit-capital-framework_06-29-2026">The June 2026 capital framework</a> states management's liquidity and allocation policies. <a href="https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm">The Q2 filing</a> supplies financial and security terms. Sources reviewed October 23, 2026. No latest market balances are claimed here.</p>
+</main><script>
+const el=id=>document.getElementById(id),dollars=n=>n<0?'−$'+(-n).toFixed(2):'$'+n.toFixed(2);
+function common(){const p=+el('price').value,raised=20*p,payout=el('use').value==='payout',assets=payout?100:100+raised,alternative=payout?100-raised:100,per=assets/120;el('price-label').textContent=dollars(p);el('assets').textContent=dollars(assets);el('alt-assets').textContent=dollars(alternative);el('per').textContent='$'+per.toFixed(4);el('alt-per').textContent='$'+(alternative/100).toFixed(4);el('common-summary').textContent='Issuance raises '+dollars(raised)+'. Net assets per share '+(per>=1?'rise ':'fall ')+Math.abs((per-1)*100).toFixed(2)+'% from the starting value.';return {raised,assets,alternative,per};}
+function preferred(){const a=+el('proceeds').value,g=+el('growth').value/100,carry=10/a,residual=a*(1+g)-110,threshold=110/a-1;el('proceeds-label').textContent='$'+a;el('growth-label').textContent=(g*100).toFixed(1)+'%';el('carry').textContent=(carry*100).toFixed(1)+'%';el('residual').textContent=dollars(residual);el('breakeven').textContent=(threshold*100).toFixed(1)+'%';return {carry,residual,threshold};}
+for(const id of ['price','use'])el(id).addEventListener('input',common);for(const id of ['proceeds','growth'])el(id).addEventListener('input',preferred);common();preferred();
+console.assert(Math.abs(125/120-1-1/24)<1e-12,'Common assets example');console.assert(Math.abs(80*1.375-110)<1e-10,'Preferred residual');
+console.log(JSON.stringify({common:common(),preferred:preferred(),bodyWidth:document.documentElement.scrollWidth,viewport:innerWidth}));
+</script></body></html>
